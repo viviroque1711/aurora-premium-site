@@ -7,7 +7,12 @@ export function getStaticPaths() {
   return pageDirs().map((dir) => ({ params: { slug: dir === '_home' ? undefined : dir }, props: { dir } }));
 }
 
-const { head, css, ld, body, js } = pageParts(Astro.props.dir);
+const parts = pageParts(Astro.props.dir);
+const { css, ld, body, js } = parts;
+// Ambiente de teste: não deixar o Google indexar o endereço provisório.
+const head = process.env.SITE_ENV === 'staging'
+  ? parts.head.replace(/<meta name="robots" content="[^"]*">/, '<meta name="robots" content="noindex, nofollow">')
+  : parts.head;
 ---
 <!doctype html>
 <html lang="pt-BR">
