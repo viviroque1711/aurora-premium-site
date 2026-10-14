@@ -1,16 +1,14 @@
-import { execSync } from 'node:child_process';
+import lastmodMap from '../data/lastmod.json';
 import { LLMS } from '../data/llms.mjs';
 
 const heads = import.meta.glob('/src/content-pages/*/head.html', { query: '?raw', import: 'default', eager: true });
 
 const decode = (s) => s.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'");
 
-function lastmod(dir) {
-  try {
-    const d = execSync(`git log -1 --format=%cs -- "src/content-pages/${dir}"`, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
-    if (d) return d;
-  } catch {}
-  return new Date().toISOString().slice(0, 10);
+// Data da última alteração REAL de cada página (src/data/lastmod.json). scripts/import-package.mjs atualiza
+// sozinho quando o conteúdo de uma página muda; páginas editadas à mão precisam ter a data atualizada lá.
+function lastmod(path) {
+  return lastmodMap[path] || new Date().toISOString().slice(0, 10);
 }
 
 /** Todas as páginas importadas de pacotes: caminho, título, descrição, lastmod e dados do llms.txt. */
@@ -20,7 +18,7 @@ export function contentPages() {
     const path = dir === '_home' ? '/' : `/${dir.replace(/__/g, '/')}/`;
     const title = decode(head.match(/<title>([^<]*)<\/title>/)[1]);
     const description = decode(head.match(/<meta name="description" content="([^"]*)"/)[1]);
-    return { dir, path, title, description, lastmod: lastmod(dir), ...(LLMS[path] || {}) };
+    return { dir, path, title, description, lastmod: lastmod(path), ...(LLMS[path] || {}) };
   }).sort((a, b) => a.path.localeCompare(b.path));
 }
 

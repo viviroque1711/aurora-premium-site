@@ -43,6 +43,17 @@ for (const pkg of process.argv.slice(2)) {
     const key = slug || '_home';
     const parts = splitPage(read(path.join(pkgDir, slug, 'index.html')));
     const d = path.join(outDir, key);
+    // Atualiza a data de alteração (sitemap) só quando o conteúdo realmente mudou.
+    const changed = !fs.existsSync(path.join(d, 'body.html')) || ['head.html', 'style.css', 'ld.json', 'body.html', 'script.js'].some((n, i) => {
+      const next = [parts.head, parts.css, parts.ld, parts.body, parts.js][i] + '\n';
+      return !fs.existsSync(path.join(d, n)) || fs.readFileSync(path.join(d, n), 'utf8').replace(/\r\n/g, '\n') !== next;
+    });
+    if (changed) {
+      const lm = path.join(root, 'src', 'data', 'lastmod.json');
+      const map = fs.existsSync(lm) ? JSON.parse(read(lm)) : {};
+      map[slug ? `/${slug}/` : '/'] = new Date().toISOString().slice(0, 10);
+      write(lm, JSON.stringify(map, null, 2) + '\n');
+    }
     write(path.join(d, 'head.html'), parts.head + '\n');
     write(path.join(d, 'style.css'), parts.css + '\n');
     write(path.join(d, 'ld.json'), parts.ld + '\n');
