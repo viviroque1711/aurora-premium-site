@@ -8,7 +8,7 @@ export function GET() {
     const list = pages.filter((p) => p.group === i);
     if (!list.length) return;
     out.push(`## ${g}`);
-    for (const p of list) out.push(`- [${p.title.replace(/ | Aurora Premium$/, '')}](https://aurorapremium.com${p.path}): ${p.entrega}`);
+    for (const p of list) out.push(`- [${p.title.replace(/ \| Aurora Premium$/, '')}](https://aurorapremium.com${p.path}): ${p.entrega}`);
     out.push('');
   });
   return new Response(out.join('\n'), { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
