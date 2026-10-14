@@ -17,7 +17,7 @@ function lastmod(dir) {
 export function contentPages() {
   return Object.entries(heads).map(([file, head]) => {
     const dir = file.split('/').slice(-2, -1)[0];
-    const path = dir === '_home' ? '/' : `/${dir}/`;
+    const path = dir === '_home' ? '/' : `/${dir.replace(/__/g, '/')}/`;
     const title = decode(head.match(/<title>([^<]*)<\/title>/)[1]);
     const description = decode(head.match(/<meta name="description" content="([^"]*)"/)[1]);
     return { dir, path, title, description, lastmod: lastmod(dir), ...(LLMS[path] || {}) };

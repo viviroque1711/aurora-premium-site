@@ -1,0 +1,7 @@
+/agenda-para-clinica-veterinaria/
+/segmentos/veterinarias/
+/segmentos/clinicas/
+/segmentos/saloes/
+/segmentos/spas/
+/segmentos/barbearias/
+/segmentos/petshops/

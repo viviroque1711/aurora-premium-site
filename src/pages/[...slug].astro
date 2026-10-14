@@ -4,7 +4,7 @@
 import { pageDirs, pageParts } from '../lib/pages.mjs';
 
 export function getStaticPaths() {
-  return pageDirs().map((dir) => ({ params: { slug: dir === '_home' ? undefined : dir }, props: { dir } }));
+  return pageDirs().map((dir) => ({ params: { slug: dir === '_home' ? undefined : dir.replace(/__/g, '/') }, props: { dir } }));
 }
 
 const parts = pageParts(Astro.props.dir);
@@ -22,11 +22,11 @@ if (process.env.SITE_ENV === 'staging') {
 <html lang="pt-BR">
 <head>
 <Fragment set:html={head} />
-<script type="application/ld+json" is:inline set:html={ld}></script>
-<style is:inline set:html={css}></style>
+{ld && <script type="application/ld+json" is:inline set:html={ld}></script>}
+{css && <style is:inline set:html={css}></style>}
 </head>
 <body>
 <Fragment set:html={body} />
-<script is:inline set:html={js}></script>
+{js && <script is:inline set:html={js}></script>}
 </body>
 </html>
