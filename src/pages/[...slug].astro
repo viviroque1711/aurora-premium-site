@@ -8,11 +8,15 @@ export function getStaticPaths() {
 }
 
 const parts = pageParts(Astro.props.dir);
-const { css, ld, body, js } = parts;
-// Ambiente de teste: não deixar o Google indexar o endereço provisório.
-const head = process.env.SITE_ENV === 'staging'
-  ? parts.head.replace(/<meta name="robots" content="[^"]*">/, '<meta name="robots" content="noindex, nofollow">')
-  : parts.head;
+const { css, ld } = parts;
+let { head, body, js } = parts;
+// Ambiente de teste (GitHub Pages em /aurora-premium-site/): noindex e caminhos/links apontando para o próprio teste.
+if (process.env.SITE_ENV === 'staging') {
+  const base = '/aurora-premium-site';
+  const fix = (s) => s.replace(/(src|href)="\/(?!\/)/g, `$1="${base}/`).replace(/href="https:\/\/aurorapremium\.com\//g, `href="${base}/`);
+  head = fix(head.replace(/<meta name="robots" content="[^"]*">/, '<meta name="robots" content="noindex, nofollow">'));
+  body = fix(body);
+}
 ---
 <!doctype html>
 <html lang="pt-BR">
