@@ -34,7 +34,7 @@ for (const u of urls) {
   // imagens locais do HTML existem?
   const imgs = [...new Set([...html.matchAll(/(?:src|srcset)="([^"]+)"/g)].flatMap((m) => m[1].split(',').map((x) => x.trim().split(/\s+/)[0])).filter((x) => x.startsWith('/') && !x.startsWith('//')))];
   let broken = 0;
-  await Promise.all(imgs.map(async (i) => { const r = await fetch(base + (prefix && !i.startsWith(prefix) ? prefix : '') + i, { method: 'HEAD' }); if (!r.ok) broken++; }));
+  await Promise.all(imgs.map(async (i) => { const r = await fetch(base + i, { method: 'HEAD' }); if (!r.ok) broken++; }));
   const ok = res.status === 200 && title && h1 === 1 && phOk && ldOk && !dup && remoteRefs === 0 && broken === 0;
   if (!ok) fail++;
   rows.push({ url: u, status: res.status, title, h1, frase: phOk ? 'ok' : 'FALTA', ld: ldOk && !dup ? 'ok' : 'ERRO', remotos: remoteRefs, imgsQuebradas: broken, imgs: imgs.length, ok });

@@ -14,8 +14,9 @@ let { head, body, js } = parts;
 if (process.env.SITE_ENV === 'staging') {
   const base = '/aurora-premium-site';
   const fix = (s) => s.replace(/(src|href)="\/(?!\/)/g, `$1="${base}/`).replace(/href="https:\/\/aurorapremium\.com\//g, `href="${base}/`);
+  const fixSet = (s) => fix(s).replace(/srcset="([^"]*)"/g, (m, v) => `srcset="${v.replace(/(^|,\s*)\/(?!\/)/g, `$1${base}/`)}"`);
   head = fix(head.replace(/<meta name="robots" content="[^"]*">/, '<meta name="robots" content="noindex, nofollow">'));
-  body = fix(body);
+  body = fixSet(body);
 }
 ---
 <!doctype html>
