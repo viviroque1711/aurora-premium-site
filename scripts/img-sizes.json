@@ -1,7 +1,7 @@
 {
  "/img/aurora-premium-sistema-de-agendamento-e-gestao.webp": {
-  "m": 322,
-  "d": 611
+  "m": 348,
+  "d": 609
  },
  "/img/aurora-premium-agenda-online-sistema-de-agendamento.webp": {
   "m": 350,
@@ -44,7 +44,7 @@
   "d": 720
  },
  "/img/aurora-premium-sistema-para-salao-de-beleza.webp": {
-  "m": 322,
+  "m": 349,
   "d": 611
  },
  "/img/aurora-premium-agenda-online-para-salao-de-beleza.webp": {
@@ -72,15 +72,59 @@
   "d": 625
  },
  "/img/aurora-premium-sistema-para-barbearia.webp": {
-  "m": 322,
-  "d": 611
+  "m": 348,
+  "d": 610
  },
  "/img/aurora-premium-controle-financeiro-barbearia.webp": {
   "m": 350,
   "d": 625
  },
+ "/img/aurora-premium-sistema-para-clinica-de-estetica.webp": {
+  "m": 349,
+  "d": 613
+ },
+ "/img/aurora-premium-agenda-para-clinica-de-estetica.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-estetica-comissao.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-estetica-controle-financeiro.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-estetica-controle-de-estoque.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-site-para-clinica-de-estetica.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-sistema-para-spa.webp": {
+  "m": 349,
+  "d": 612
+ },
+ "/img/aurora-premium-agenda-para-spa.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-spa-controle-financeiro.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-spa-controle-de-estoque.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-site-para-spa.webp": {
+  "m": 350,
+  "d": 625
+ },
  "/img/aurora-premium-sistema-para-clinica-veterinaria-lembrete.webp": {
-  "m": 322,
+  "m": 349,
   "d": 453
  },
  "/img/aurora-premium-controle-financeiro-clinica-veterinaria.webp": {
@@ -92,8 +136,8 @@
   "d": 625
  },
  "/img/aurora-premium-sistema-para-pet-shop-visao-geral.webp": {
-  "m": 322,
-  "d": 611
+  "m": 349,
+  "d": 610
  },
  "/img/aurora-premium-agenda-de-banho-e-tosa.webp": {
   "m": 350,

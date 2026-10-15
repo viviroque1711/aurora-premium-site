@@ -1,0 +1,22 @@
+[
+ {
+  "href": "#agenda",
+  "label": "Agenda"
+ },
+ {
+  "href": "#pacotes",
+  "label": "Pacotes"
+ },
+ {
+  "href": "#anamnese",
+  "label": "Anamnese"
+ },
+ {
+  "href": "#prontuario",
+  "label": "Prontuário"
+ },
+ {
+  "href": "#faq",
+  "label": "Dúvidas"
+ }
+]

@@ -92,13 +92,14 @@ export function wrapCustomTables(body) {
 /** Grade do dia: dica de rolagem (só no celular, por CSS) e contêiner para o degradê da borda direita. */
 export function addGridHint(body) {
   if (body.includes('class="grid-fade"')) return body;
+  const hasOwnHint = body.includes('class="swipe"') || body.includes('class="grid-hint"'); // pacotes novos já trazem a dica
   const open = '<div class="grid-scroll">';
   const i = body.indexOf(open);
   if (i < 0) return body;
   const end = endOfElement(body, i, 'div');
   return (
     body.slice(0, i) +
-    '<p class="grid-hint" aria-hidden="true">Arraste para ver toda a equipe →</p>\n      <div class="grid-fade">' +
+    (hasOwnHint ? '' : '<p class="grid-hint" aria-hidden="true">Arraste para ver toda a equipe →</p>\n      ') + '<div class="grid-fade">' +
     body.slice(i, end) +
     '</div>' +
     body.slice(end)

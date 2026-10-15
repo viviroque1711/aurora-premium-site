@@ -1,19 +1,5 @@
 /* Ajustes de responsividade das páginas novas (pacotes). Só layout: nenhum texto muda. */
 
-/* Comparativo ("caderno x Aurora"): no celular cada linha vira um cartão */
-@media (max-width: 639.98px) {
-  .cmp-wrap { overflow: visible; margin-top: 28px; }
-  .cmp { display: block; min-width: 0; width: 100%; font-size: 16px; }
-  .cmp thead { display: none; }
-  .cmp tbody, .cmp tr, .cmp td { display: block; }
-  .cmp tr { margin-bottom: 12px; padding: 16px; border: 1px solid var(--border-dark); border-radius: 16px; background: var(--surface-dark); }
-  .cmp td { width: auto !important; padding: 0; border: 0; background: none !important; font-size: 16px; line-height: 1.5; }
-  .cmp td:first-child { margin-bottom: 8px; color: #fff; font-weight: 700; font-size: 17px; }
-  .cmp td[data-label]::before { content: attr(data-label) ": "; color: #fff; font-weight: 600; }
-  .cmp td[data-label]:last-child { margin-top: 10px; padding: 10px 12px; border-radius: 12px; background: rgba(124, 58, 237, .22) !important; color: #fff; }
-  .cmp td[data-label]:last-child::before { color: var(--accent-on-dark, #A78BFA); }
-}
-
 /* Grade do dia (agenda animada): dica de rolagem e degradê na borda direita */
 .grid-hint { display: none; }
 .grid-fade { position: relative; }

@@ -253,3 +253,50 @@ footer .seg a{text-decoration:none}footer .seg a:hover{color:#fff;text-decoratio
 .segs a:hover{border-color:var(--sec-accent);transform:translateY(-2px)}
 .segs a b{font-family:var(--font-title);font-size:18px;color:var(--sec-title)}
 .segs a span{font-size:14.5px}
+
+/* responsividade: menu no celular e tablet, tabela em cartões, dica de arrastar, toque no rodapé */
+.mnav{display:none;position:relative}
+.mnav summary{list-style:none;width:44px;height:44px;display:grid;place-items:center;border-radius:12px;border:1px solid var(--border-dark);cursor:pointer;color:#fff}
+.mnav summary::-webkit-details-marker{display:none}
+.mnav summary span,.mnav summary span::before,.mnav summary span::after{display:block;width:18px;height:2px;background:#fff;border-radius:2px;position:relative;content:""}
+.mnav summary span::before{position:absolute;top:-6px}.mnav summary span::after{position:absolute;top:6px}
+.mnav[open] summary span{background:transparent}.mnav[open] summary span::before{top:0;transform:rotate(45deg)}.mnav[open] summary span::after{top:0;transform:rotate(-45deg)}
+.mnav .panel{position:fixed;left:0;right:0;top:64px;max-height:calc(100dvh - 64px);overflow:auto;background:#0E0B18;border-bottom:1px solid var(--border-dark);padding:12px 20px 24px;display:grid;gap:2px}
+.mnav .panel a{display:flex;align-items:center;min-height:48px;text-decoration:none;color:#fff;font-size:16px;border-bottom:1px solid rgba(255,255,255,.06)}
+.mnav .panel b{margin-top:14px;font-size:13px;color:var(--text-dark);font-weight:600}
+.mnav .panel .btn{margin-top:16px;justify-content:center;border-bottom:0;width:100%}
+@media (max-width:900px){.mnav{display:block}.top .wrap{gap:10px}.top .brand{margin-right:auto}}
+@media (max-width:900px){.top .brand{white-space:nowrap}.top .btn.hdr{white-space:nowrap}}
+@media (max-width:520px){.top .btn.hdr{display:none}}
+.swipe{display:none;font-size:13px;margin:0 0 8px;color:var(--sec-text)}
+@media (max-width:640px){
+ .swipe{display:block}
+ .day .grid-scroll{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}
+ .cmp{min-width:0}
+ .cmp thead{display:none}
+ .cmp,.cmp tbody,.cmp tr,.cmp td{display:block;width:100%}
+ .cmp tr{border:1px solid var(--border-dark);border-radius:16px;margin-bottom:14px;overflow:hidden}
+ .cmp td{border:0;padding:10px 16px}
+ .cmp td:first-child{width:100%;font-size:16px;padding-top:16px}
+ .cmp td[data-label]::before{content:attr(data-label);display:block;font-size:12px;font-weight:600;opacity:.75;margin-bottom:2px}
+ .cmp td:last-child{padding-bottom:16px}
+ footer{font-size:14px}
+}
+@media (max-width:900px){footer .seg a,.link{display:inline-flex;align-items:center;min-height:44px}}
+
+/* ordem combinada: imagem logo abaixo do título da dobra */
+.sec-h{max-width:46rem;margin-bottom:32px}
+.split--below{align-items:start}
+.split--below>:not(.stack){order:-1}
+@media (min-width:1024px){
+ .split.split--below{grid-template-columns:55fr 45fr}
+ .split.split--below.split--rev{grid-template-columns:45fr 55fr}
+ .split--below.split--rev>:not(.stack){order:1}
+}
+@media (max-width:1023px){
+ .split--below{gap:28px}
+ .hero .split{display:flex;flex-direction:column;align-items:stretch;gap:18px}
+ .hero .stack{display:contents}
+ .hero nav.crumb{order:1}.hero h1{order:2}.hero .hero-art{order:3;margin-block:6px}
+ .hero .lead{order:4}.hero .sub{order:5}.hero .cta{order:6}.hero p.crumb{order:7}
+}

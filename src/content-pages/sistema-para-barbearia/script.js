@@ -31,3 +31,4 @@
     if(art&&h.scrollTop<900)art.style.translate='0 '+(h.scrollTop*.12)+'px';
   },{passive:true});
 })();
+(function(){var m=document.querySelector('.mnav');if(!m)return;m.addEventListener('click',function(e){if(e.target.closest('.panel a'))m.removeAttribute('open')});document.addEventListener('keydown',function(e){if(e.key==='Escape')m.removeAttribute('open')});document.addEventListener('click',function(e){if(!m.contains(e.target))m.removeAttribute('open')})})();
