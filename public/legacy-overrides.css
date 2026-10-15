@@ -1,0 +1,28 @@
+/* Ajustes das páginas antigas dentro da moldura única: fonte e contraste do texto corrido,
+   tamanho mínimo no celular, tabelas e espaçamento. Os blocos em si não são redesenhados. */
+
+#root, #root .font-sans { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+#root h1, #root h2, #root h3, #root h4 { font-family: "Bricolage Grotesque", "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+
+/* tabelas: cartões no celular (as da política de privacidade estouravam a tela) */
+.tbl-scroll { overflow-x: auto; max-width: 100%; }
+@media (max-width: 639.98px) {
+  .tbl-scroll table, .tbl-scroll thead, .tbl-scroll tbody, .tbl-scroll tr, .tbl-scroll td { display: block; width: 100%; }
+  .tbl-scroll thead { display: none; }
+  .tbl-scroll tr { margin-bottom: 12px; padding: 14px 16px; border: 1px solid var(--border-dark, rgba(255,255,255,.1)); border-radius: 16px; background: var(--surface-dark, #12121E); }
+  .tbl-scroll td { padding: 0; border: 0; overflow-wrap: anywhere; }
+  .tbl-scroll td:first-child { margin-bottom: 6px; color: #fff; font-weight: 700; }
+  .tbl-scroll td[data-label]:not(:first-child)::before { content: attr(data-label) ": "; color: #fff; font-weight: 600; }
+}
+
+/* Celular: texto corrido a partir de 15 px e alvos de toque de 44 px */
+@media (max-width: 767.98px) {
+  #root :is(p, li, td, dd, blockquote, figcaption, ul, ol):is(.text-xs, .text-sm, [class*="text-[11px]"], [class*="text-[12px]"], [class*="text-[13px]"], [class*="text-[14px]"]) { font-size: 15px; }
+  #root a[href^="mailto:"], #root a[href*="politica-de-privacidade"], #root a[href*="termos-de-uso"], #root a.underline, #root a.px-4, #root a.text-sm, #root a.inline-flex, #root a.whitespace-nowrap, #root button.px-4 {
+    display: inline-flex; align-items: center; min-height: 44px;
+  }
+}
+
+/* Páginas antigas de segmento: a 1ª dobra deixava ~200 px vazios antes da 2ª (pb-20/lg:pb-28 + py-20) */
+#root main > section:first-child.overflow-hidden { padding-bottom: 48px; }
+.tbl-scroll td, .tbl-scroll th { border: 0 !important; background: none !important; }

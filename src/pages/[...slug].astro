@@ -1,16 +1,27 @@
 ---
-// Rota única das páginas importadas de pacotes (src/content-pages/<slug>/).
-// Conteúdo, CSS, JSON-LD e script saem exatamente como vieram no pacote.
-import { pageDirs, pageParts } from '../lib/pages.mjs';
+// Rota única das páginas importadas (src/content-pages/<slug>/), todas com a mesma moldura
+// (SiteHeader + SiteFooter). Conteúdo, CSS, JSON-LD e script do miolo saem como vieram.
+import '../styles/frame.css';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+import { contentPages, pageDirs, pageParts } from '../lib/pages.mjs';
+import { u } from '../lib/url.mjs';
 
 export function getStaticPaths() {
   return pageDirs().map((dir) => ({ params: { slug: dir === '_home' ? undefined : dir.replace(/__/g, '/') }, props: { dir } }));
 }
 
-const parts = pageParts(Astro.props.dir);
-const { css, ld } = parts;
-let { head, body, js } = parts;
-// Ambiente de teste (GitHub Pages em /aurora-premium-site/): noindex e caminhos/links apontando para o próprio teste.
+const { dir } = Astro.props;
+const parts = pageParts(dir);
+const { css, ld, js } = parts;
+const legacy = !css; // páginas antigas (React pré-renderizado) não têm CSS próprio
+const subnav = parts.subnav ? JSON.parse(parts.subnav) : [];
+const updated = contentPages().find((p) => p.dir === dir).lastmod;
+
+let head = parts.head;
+let body = parts.body;
+// Ambiente de teste (GitHub Pages em /aurora-premium-site/): noindex e caminhos/links/srcset apontando para o próprio teste.
 if (process.env.SITE_ENV === 'staging') {
   const base = '/aurora-premium-site';
   const fix = (s) => s.replace(/(src|href)="\/(?!\/)/g, `$1="${base}/`).replace(/href="https:\/\/aurorapremium\.com\//g, `href="${base}/`);
@@ -25,9 +36,23 @@ if (process.env.SITE_ENV === 'staging') {
 <Fragment set:html={head} />
 {ld && <script type="application/ld+json" is:inline set:html={ld}></script>}
 {css && <style is:inline set:html={css}></style>}
+<link rel="stylesheet" href={u(legacy ? '/legacy-overrides.css' : '/pkg-overrides.css')}>
 </head>
-<body>
+<body class={legacy ? 'ap-has-wa' : undefined}>
+<SiteHeader subnav={subnav} />
 <Fragment set:html={body} />
+<SiteFooter updated={updated} />
+{legacy && <WhatsAppFloat />}
+{!legacy && <script is:inline>{`
+  document.querySelectorAll('.grid-fade').forEach(function (box) {
+    var sc = box.querySelector('.grid-scroll');
+    if (!sc) return;
+    var sync = function () { box.classList.toggle('at-end', sc.scrollLeft + sc.clientWidth >= sc.scrollWidth - 4); };
+    sc.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync);
+    sync();
+  });
+`}</script>}
 {js && <script is:inline set:html={js}></script>}
 </body>
 </html>

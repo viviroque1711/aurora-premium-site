@@ -1,0 +1,117 @@
+---
+// Cabeçalho único do site (todas as páginas). Anchors da página entram na barra fina (subnav) a partir de 1024 px.
+import { SEGMENTOS, REDES_HUB, SIGNUP, LOGIN } from '../data/nav.mjs';
+import { u } from '../lib/url.mjs';
+
+const { subnav = [] } = Astro.props;
+---
+<header class="ap-header" data-ap-header>
+  <div class="ap-bar">
+    <a class="ap-logo" href={u('/')} aria-label="Aurora Premium, página inicial">
+      <img src={u('/aurora-premium-logo-onda.png')} width="267" height="105" alt="" aria-hidden="true">
+      <span>Aurora Premium</span>
+    </a>
+
+    <nav class="ap-nav" aria-label="Principal">
+      <div class="ap-dd">
+        <button type="button" class="ap-dd-btn" aria-expanded="false" aria-controls="ap-seg-menu" data-ap-dd>Segmentos</button>
+        <div class="ap-dd-panel" id="ap-seg-menu" hidden>
+          <ul>
+            {SEGMENTOS.map((s) => <li><a href={u(s.href)}>{s.label}</a></li>)}
+          </ul>
+          <a class="ap-dd-all" href={u(REDES_HUB.href)}>Redes e franquias</a>
+        </div>
+      </div>
+      <a href={u('/planos/')}>Planos</a>
+      <a href={u('/blog/')}>Blog</a>
+      <a href={LOGIN} rel="noopener">Entrar</a>
+    </nav>
+
+    <a class="ap-cta" href={SIGNUP} rel="noopener" aria-label="Teste o Aurora Premium">
+      <span class="ap-cta-long">Teste o Aurora Premium</span><span class="ap-cta-short" aria-hidden="true">Teste grátis</span>
+    </a>
+
+    <button type="button" class="ap-burger" aria-expanded="false" aria-controls="ap-menu" aria-label="Abrir menu" data-ap-burger>
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  {subnav.length > 0 && (
+    <nav class="ap-subnav" aria-label="Seções da página">
+      <div class="ap-subnav-in">
+        {subnav.map((s) => <a href={s.href}>{s.label}</a>)}
+      </div>
+    </nav>
+  )}
+
+  <div class="progress" aria-hidden="true"></div>
+
+  <div class="ap-backdrop" hidden data-ap-backdrop></div>
+  <div class="ap-menu" id="ap-menu" hidden>
+    <p class="ap-menu-h">Segmentos</p>
+    <ul>
+      {SEGMENTOS.map((s) => <li><a href={u(s.href)}>{s.label}</a></li>)}
+      <li><a href={u(REDES_HUB.href)}>Redes e franquias</a></li>
+    </ul>
+    <ul class="ap-menu-main">
+      <li><a href={u('/planos/')}>Planos</a></li>
+      <li><a href={u('/blog/')}>Blog</a></li>
+      <li><a href={LOGIN} rel="noopener">Entrar</a></li>
+    </ul>
+    <a class="ap-cta ap-cta-block" href={SIGNUP} rel="noopener">Teste o Aurora Premium</a>
+  </div>
+</header>
+
+<script>
+  const header = document.querySelector('[data-ap-header]');
+  const burger = header.querySelector('[data-ap-burger]');
+  const menu = header.querySelector('#ap-menu');
+  const backdrop = header.querySelector('[data-ap-backdrop]');
+  const dd = header.querySelector('[data-ap-dd]');
+  const ddPanel = header.querySelector('#ap-seg-menu');
+  const root = document.documentElement;
+
+  const setMenu = (open, returnFocus) => {
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    menu.hidden = !open;
+    backdrop.hidden = !open;
+    root.classList.toggle('ap-menu-open', open);
+    if (!open && returnFocus) burger.focus();
+  };
+  const setDd = (open, returnFocus) => {
+    dd.setAttribute('aria-expanded', String(open));
+    ddPanel.hidden = !open;
+    if (!open && returnFocus) dd.focus();
+  };
+
+  burger.addEventListener('click', () => setMenu(burger.getAttribute('aria-expanded') !== 'true'));
+  backdrop.addEventListener('click', () => setMenu(false));
+  dd.addEventListener('click', () => setDd(dd.getAttribute('aria-expanded') !== 'true'));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    if (burger.getAttribute('aria-expanded') === 'true') setMenu(false, true);
+    if (dd.getAttribute('aria-expanded') === 'true') setDd(false, true);
+  });
+  document.addEventListener('click', (e) => {
+    if (dd.getAttribute('aria-expanded') === 'true' && !dd.parentElement.contains(e.target)) setDd(false);
+  });
+  ddPanel.addEventListener('focusout', (e) => {
+    if (!dd.parentElement.contains(e.relatedTarget) && e.relatedTarget) setDd(false);
+  });
+  // Ao passar do celular para o desktop com o menu aberto, fecha o painel.
+  window.matchMedia('(min-width: 1024px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
+  // Tocar num link do painel fecha o menu (âncoras da mesma página não recarregam).
+  menu.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
+
+  // Barra de leitura (as páginas novas já tinham; as antigas passam a ter também).
+  const bar = header.querySelector('.progress');
+  const onScroll = () => {
+    const h = root;
+    const max = h.scrollHeight - h.clientHeight;
+    bar.style.transform = 'scaleX(' + (max > 0 ? h.scrollTop / max : 0) + ')';
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+</script>

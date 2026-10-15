@@ -7,6 +7,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import { frameTransform } from './lib/frame.mjs';
 
 const root = path.resolve(import.meta.dirname, '..');
 const [rawDir, cssFile] = process.argv.slice(2).map((p) => path.resolve(p));
@@ -108,6 +109,7 @@ for (const f of files) {
   must(bs > 0 && be > bs, 'sem #root em ' + f);
   let body = html.slice(bs, be).trim();
   body = convertButtons(body.replace(/ data-discover="true"/g, ''));
+  body = frameTransform(body, 'legacy').body; // cabeçalho, rodapé e WhatsApp saem: a moldura é única
   body += '\n<script src="/legacy.js" defer></script>';
 
   const dir = path.join(outDir, slug.replace(/\//g, '__'));

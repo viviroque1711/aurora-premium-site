@@ -1,0 +1,47 @@
+---
+// Rodapé único do site (todas as páginas).
+import { SEGMENTOS, REDES, PLATAFORMA, WHATSAPP, EMAIL } from '../data/nav.mjs';
+import { u } from '../lib/url.mjs';
+
+const { updated } = Astro.props; // AAAA-MM-DD (lastmod.json)
+const [y, m, d] = updated.split('-');
+const updatedBr = `${d}/${m}/${y}`;
+---
+<footer class="ap-footer">
+  <div class="ap-footer-in">
+    <div class="ap-footer-brand">
+      <a class="ap-logo" href={u('/')} aria-label="Aurora Premium, página inicial">
+        <img src={u('/aurora-premium-logo-onda.png')} width="267" height="105" alt="" aria-hidden="true">
+        <span>Aurora Premium</span>
+      </a>
+      <p>O Aurora Premium é um sistema de agendamento online e gestão para salões, barbearias, clínicas e pet shops.</p>
+    </div>
+
+    <nav class="ap-footer-col" aria-label="Plataforma">
+      <p class="ap-footer-h">Plataforma</p>
+      <ul>{PLATAFORMA.map((l) => <li><a href={u(l.href)}>{l.label}</a></li>)}</ul>
+    </nav>
+    <nav class="ap-footer-col" aria-label="Segmentos">
+      <p class="ap-footer-h">Segmentos</p>
+      <ul>{SEGMENTOS.map((l) => <li><a href={u(l.href)}>{l.label}</a></li>)}</ul>
+    </nav>
+    <nav class="ap-footer-col" aria-label="Redes e franquias">
+      <p class="ap-footer-h">Redes e franquias</p>
+      <ul>{REDES.map((l) => <li><a href={u(l.href)}>{l.label}</a></li>)}</ul>
+    </nav>
+    <div class="ap-footer-col">
+      <p class="ap-footer-h">Contato</p>
+      <ul>
+        <li><a href={`mailto:${EMAIL}`}>{EMAIL}</a></li>
+        <li><a href={WHATSAPP.href} rel="noopener">WhatsApp {WHATSAPP.label}</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="ap-footer-end">
+    <span>© 2026 Aurora Premium</span>
+    <a href={u('/termos-de-uso/')}>Termos de Uso</a>
+    <a href={u('/politica-de-privacidade/')}>Política de Privacidade</a>
+    <span>Atualizado em {updatedBr}</span>
+  </div>
+</footer>

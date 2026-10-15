@@ -27,7 +27,7 @@ const parts = import.meta.glob('/src/content-pages/*/*', { query: '?raw', import
 /** Pedaços (head, css, ld, body, js) de uma página importada. */
 export function pageParts(dir) {
   const get = (name) => parts[`/src/content-pages/${dir}/${name}`];
-  return { head: get('head.html'), css: get('style.css'), ld: get('ld.json'), body: get('body.html'), js: get('script.js') };
+  return { head: get('head.html'), css: get('style.css'), ld: get('ld.json'), body: get('body.html'), js: get('script.js'), subnav: get('subnav.json') };
 }
 
 export function pageDirs() {

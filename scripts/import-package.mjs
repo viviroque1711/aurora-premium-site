@@ -4,6 +4,7 @@
 // Cada <pasta>/**/index.html vira uma página; img/ e arquivos da raiz vão para public/.
 import fs from 'node:fs';
 import path from 'node:path';
+import { frameTransform } from './lib/frame.mjs';
 
 const root = path.resolve(import.meta.dirname, '..');
 const outDir = path.join(root, 'src', 'content-pages');
@@ -42,11 +43,15 @@ for (const pkg of process.argv.slice(2)) {
   for (const slug of findPages(pkgDir)) {
     const key = slug || '_home';
     const parts = splitPage(read(path.join(pkgDir, slug, 'index.html')));
+    // cabeçalho/rodapé próprios saem (a moldura é única) e as âncoras da página vão para subnav.json
+    const fr = frameTransform(parts.body, 'package');
+    parts.body = fr.body;
     const d = path.join(outDir, key);
     // Atualiza a data de alteração (sitemap) só quando o conteúdo realmente mudou.
     const changed = !fs.existsSync(path.join(d, 'body.html')) || ['head.html', 'style.css', 'ld.json', 'body.html', 'script.js'].some((n, i) => {
+      const norm = (s) => s.replace(/ srcset="[^"]*"/g, '').replace(/ sizes="[^"]*"/g, '');
       const next = [parts.head, parts.css, parts.ld, parts.body, parts.js][i] + '\n';
-      return !fs.existsSync(path.join(d, n)) || fs.readFileSync(path.join(d, n), 'utf8').replace(/\r\n/g, '\n') !== next;
+      return !fs.existsSync(path.join(d, n)) || norm(fs.readFileSync(path.join(d, n), 'utf8').replace(/\r\n/g, '\n')) !== norm(next);
     });
     if (changed) {
       const lm = path.join(root, 'src', 'data', 'lastmod.json');
@@ -59,6 +64,7 @@ for (const pkg of process.argv.slice(2)) {
     write(path.join(d, 'ld.json'), parts.ld + '\n');
     write(path.join(d, 'body.html'), parts.body + '\n');
     write(path.join(d, 'script.js'), parts.js + '\n');
+    if (fr.subnav) write(path.join(d, 'subnav.json'), JSON.stringify(fr.subnav, null, 1) + '\n');
     console.log('página', slug || '/', 'body', parts.body.length, 'css', parts.css.length);
   }
   // imagens e arquivos da raiz do domínio

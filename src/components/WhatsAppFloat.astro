@@ -1,0 +1,20 @@
+---
+// Botão flutuante do WhatsApp (só páginas antigas). Some quando a dobra final ou o rodapé aparecem.
+import { WHATSAPP } from '../data/nav.mjs';
+---
+<a class="ap-wa" href={WHATSAPP.href} rel="noopener" target="_blank" aria-label={`Falar no WhatsApp ${WHATSAPP.label}`} data-ap-wa>
+  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+</a>
+
+<script>
+  const wa = document.querySelector('[data-ap-wa]');
+  const targets = [document.querySelector('main > :last-child'), document.querySelector('.ap-footer')].filter(Boolean);
+  if (wa && 'IntersectionObserver' in window && targets.length) {
+    const visible = new Set();
+    const io = new IntersectionObserver((entries) => {
+      for (const en of entries) { if (en.isIntersecting) visible.add(en.target); else visible.delete(en.target); }
+      wa.classList.toggle('ap-wa-hide', visible.size > 0);
+    }, { threshold: 0.15 });
+    targets.forEach((t) => io.observe(t));
+  }
+</script>

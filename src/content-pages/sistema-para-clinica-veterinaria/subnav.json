@@ -1,0 +1,22 @@
+[
+ {
+  "href": "#agenda",
+  "label": "Agenda"
+ },
+ {
+  "href": "#prontuario",
+  "label": "Prontuário"
+ },
+ {
+  "href": "#estoque",
+  "label": "Estoque"
+ },
+ {
+  "href": "#financeiro",
+  "label": "Financeiro"
+ },
+ {
+  "href": "#faq",
+  "label": "Dúvidas"
+ }
+]
