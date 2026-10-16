@@ -1,7 +1,7 @@
 {
  "/img/aurora-premium-sistema-de-agendamento-e-gestao.webp": {
-  "m": 349,
-  "d": 613
+  "m": 350,
+  "d": 612
  },
  "/img/aurora-premium-agenda-online-sistema-de-agendamento.webp": {
   "m": 350,
@@ -45,7 +45,7 @@
  },
  "/img/aurora-premium-sistema-para-salao-de-beleza.webp": {
   "m": 348,
-  "d": 611
+  "d": 612
  },
  "/img/aurora-premium-agenda-online-para-salao-de-beleza.webp": {
   "m": 350,
@@ -72,7 +72,7 @@
   "d": 625
  },
  "/img/aurora-premium-sistema-para-barbearia.webp": {
-  "m": 347,
+  "m": 348,
   "d": 611
  },
  "/img/aurora-premium-controle-financeiro-barbearia.webp": {
@@ -80,8 +80,8 @@
   "d": 625
  },
  "/img/aurora-premium-sistema-para-clinica-de-estetica.webp": {
-  "m": 348,
-  "d": 612
+  "m": 349,
+  "d": 611
  },
  "/img/aurora-premium-agenda-para-clinica-de-estetica.webp": {
   "m": 350,
@@ -103,9 +103,36 @@
   "m": 350,
   "d": 625
  },
- "/img/aurora-premium-sistema-para-clinica-medica.webp": {
+ "/img/aurora-premium-sistema-para-clinica-odontologica.webp": {
   "m": 349,
   "d": 611
+ },
+ "/img/aurora-premium-agenda-odontologica.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-comissao-de-dentistas.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-clinica-odontologica-controle-financeiro.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-software-odontologico-relatorios-ia.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-site-para-clinica-odontologica.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-clinica-odontologica-lembrete-whatsapp.webp": {
+  "d": 425
+ },
+ "/img/aurora-premium-sistema-para-clinica-medica.webp": {
+  "m": 349,
+  "d": 612
  },
  "/img/aurora-premium-agenda-medica.webp": {
   "m": 350,
@@ -148,8 +175,8 @@
   "d": 625
  },
  "/img/aurora-premium-sistema-para-clinica-veterinaria-lembrete.webp": {
-  "m": 349,
-  "d": 453
+  "m": 348,
+  "d": 452
  },
  "/img/aurora-premium-controle-financeiro-clinica-veterinaria.webp": {
   "m": 350,
