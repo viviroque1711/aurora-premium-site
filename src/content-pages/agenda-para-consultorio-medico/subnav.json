@@ -1,0 +1,22 @@
+[
+ {
+  "href": "#agenda",
+  "label": "Agenda"
+ },
+ {
+  "href": "#prontuario",
+  "label": "Prontuário"
+ },
+ {
+  "href": "#convenios",
+  "label": "Convênios"
+ },
+ {
+  "href": "#consultoria",
+  "label": "Consultoria"
+ },
+ {
+  "href": "#faq",
+  "label": "Dúvidas"
+ }
+]

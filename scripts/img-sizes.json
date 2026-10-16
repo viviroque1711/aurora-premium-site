@@ -1,7 +1,7 @@
 {
  "/img/aurora-premium-sistema-de-agendamento-e-gestao.webp": {
-  "m": 348,
-  "d": 609
+  "m": 349,
+  "d": 612
  },
  "/img/aurora-premium-agenda-online-sistema-de-agendamento.webp": {
   "m": 350,
@@ -45,7 +45,7 @@
  },
  "/img/aurora-premium-sistema-para-salao-de-beleza.webp": {
   "m": 349,
-  "d": 611
+  "d": 613
  },
  "/img/aurora-premium-agenda-online-para-salao-de-beleza.webp": {
   "m": 350,
@@ -73,14 +73,14 @@
  },
  "/img/aurora-premium-sistema-para-barbearia.webp": {
   "m": 348,
-  "d": 610
+  "d": 613
  },
  "/img/aurora-premium-controle-financeiro-barbearia.webp": {
   "m": 350,
   "d": 625
  },
  "/img/aurora-premium-sistema-para-clinica-de-estetica.webp": {
-  "m": 349,
+  "m": 350,
   "d": 613
  },
  "/img/aurora-premium-agenda-para-clinica-de-estetica.webp": {
@@ -100,6 +100,30 @@
   "d": 625
  },
  "/img/aurora-premium-site-para-clinica-de-estetica.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-sistema-para-clinica-medica.webp": {
+  "m": 350,
+  "d": 612
+ },
+ "/img/aurora-premium-agenda-medica.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-clinica-medica-comissao-medicos.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-clinica-medica-controle-financeiro.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-clinica-medica-relatorios-ia.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-site-para-clinica-medica.webp": {
   "m": 350,
   "d": 625
  },
@@ -137,7 +161,7 @@
  },
  "/img/aurora-premium-sistema-para-pet-shop-visao-geral.webp": {
   "m": 349,
-  "d": 610
+  "d": 613
  },
  "/img/aurora-premium-agenda-de-banho-e-tosa.webp": {
   "m": 350,
