@@ -1,6 +1,6 @@
 {
  "/img/aurora-premium-sistema-de-agendamento-e-gestao.webp": {
-  "m": 348,
+  "m": 349,
   "d": 611
  },
  "/img/aurora-premium-agenda-online-sistema-de-agendamento.webp": {
@@ -44,7 +44,7 @@
   "d": 720
  },
  "/img/aurora-premium-sistema-para-salao-de-beleza.webp": {
-  "m": 348,
+  "m": 349,
   "d": 610
  },
  "/img/aurora-premium-agenda-online-para-salao-de-beleza.webp": {
@@ -73,7 +73,7 @@
  },
  "/img/aurora-premium-sistema-para-barbearia.webp": {
   "m": 348,
-  "d": 611
+  "d": 610
  },
  "/img/aurora-premium-controle-financeiro-barbearia.webp": {
   "m": 350,
@@ -105,7 +105,7 @@
  },
  "/img/aurora-premium-sistema-para-clinica-odontologica.webp": {
   "m": 348,
-  "d": 610
+  "d": 612
  },
  "/img/aurora-premium-agenda-odontologica.webp": {
   "m": 350,
@@ -131,8 +131,8 @@
   "d": 425
  },
  "/img/aurora-premium-sistema-para-clinica-medica.webp": {
-  "m": 348,
-  "d": 611
+  "m": 349,
+  "d": 610
  },
  "/img/aurora-premium-agenda-medica.webp": {
   "m": 350,
@@ -154,8 +154,39 @@
   "m": 350,
   "d": 625
  },
+ "/img/aurora-premium-sistema-para-esmalteria.webp": {
+  "m": 348,
+  "d": 609
+ },
+ "/img/aurora-premium-agenda-para-esmalteria.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-comissao-de-manicure.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-esmalteria-controle-financeiro.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-esmalteria-suprimentos.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-esmalteria-relatorios-ia.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-site-para-esmalteria.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-esmalteria-lembrete-whatsapp.webp": {
+  "d": 425
+ },
  "/img/aurora-premium-sistema-para-spa.webp": {
-  "m": 347,
+  "m": 348,
   "d": 610
  },
  "/img/aurora-premium-agenda-para-spa.webp": {
@@ -175,8 +206,8 @@
   "d": 625
  },
  "/img/aurora-premium-sistema-para-clinica-veterinaria-lembrete.webp": {
-  "m": 350,
-  "d": 452
+  "m": 348,
+  "d": 451
  },
  "/img/aurora-premium-controle-financeiro-clinica-veterinaria.webp": {
   "m": 350,
@@ -188,7 +219,7 @@
  },
  "/img/aurora-premium-sistema-para-pet-shop-visao-geral.webp": {
   "m": 348,
-  "d": 610
+  "d": 611
  },
  "/img/aurora-premium-agenda-de-banho-e-tosa.webp": {
   "m": 350,
@@ -228,6 +259,6 @@
  },
  "/img/aurora-premium-lembrete-de-agendamento-whatsapp.webp": {
   "m": 348,
-  "d": 452
+  "d": 449
  }
 }
