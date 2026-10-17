@@ -46,8 +46,7 @@
   "O sistema envia lembretes automáticos via WhatsApp e e-mail para o cli"
  ],
  "/lembrete-de-agendamento-whatsapp/": [
-  "O Aurora avisa cada cliente antes do horário marcado, direto no WhatsA",
-  "Lembretes no tempo certoEnvie dois dias antes, um dia antes ou no próp"
+  "Modelo de mensagem de lembrete de consulta e de horário"
  ],
  "/modules/": [
   "Os 14 módulos do Aurora Premium em um só sistema"

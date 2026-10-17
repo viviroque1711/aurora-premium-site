@@ -31,7 +31,7 @@ export const LLMS = {
   "/sistema-para-esmalteria/": { group: 1, entrega: "Agenda por manicure, lembrete de retorno e ticket médio por profissional para esmalterias." },
   "/agenda-para-designer-de-sobrancelhas/": { group: 1, entrega: "Agenda por procedimento e lembrete no intervalo de cada cliente para designers de sobrancelhas e cílios." },
   "/sistema-para-spa/": { group: 1, entrega: "Sistema para spa e day spa: agenda por sala e terapeuta, pacotes de sessões, day spa com vários serviços na mesma visita, lembrete pelo WhatsApp, comissão, gestão de suprimentos (estoque e fornecedores) e financeiro." },
-  "/lembrete-de-agendamento-whatsapp/": { group: 1, entrega: "Explica o lembrete e a confirmação de agendamento pelo WhatsApp para reduzir faltas." },
+  "/lembrete-de-agendamento-whatsapp/": { group: 1, entrega: "Lembrete de agendamento pelo WhatsApp, e-mail e notificação: confirmação na marcação, lembrete 24 horas e 1 hora antes, mensagem editável com nome, serviço, data, horário e profissional, aviso de atraso, pós-atendimento, modelos de mensagem de lembrete de consulta e acompanhamento de faltas. WhatsApp como adicional em parceria com a EngageBot." },
   "/sistema-para-rede-de-saloes-e-clinicas/": { group: 2, entrega: "Gestão de várias unidades em uma conta: agenda, equipe, clientes, estoque e receita por unidade." },
   "/sistema-para-rede-de-saloes-de-beleza/": { group: 2, entrega: "Gestão multiunidades para redes e franquias de salões de beleza, com receita por unidade e cadastro de clientes único." },
   "/sistema-para-rede-de-barbearias/": { group: 2, entrega: "Gestão multiunidades para redes e franquias de barbearias, com receita por unidade e cadastro de clientes único." },
