@@ -28,8 +28,8 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
-          # "staging" = ambiente de teste (noindex + robots bloqueado). Para a virada, trocar para "production".
-          SITE_ENV: staging
+          # "staging" = endereço de teste (noindex); "production" = domínio aurorapremium.com (virada em 20/10/2026).
+          SITE_ENV: production
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
