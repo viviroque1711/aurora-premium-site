@@ -19,7 +19,7 @@ fs.copyFileSync(cssFile, path.join(root, 'public', 'legacy.css'));
 const SITE = 'https://aurorapremium.com';
 const SIGNUP = 'https://app.aurorapremium.com/auth?mode=signup';
 const LOGIN = 'https://app.aurorapremium.com/auth?mode=login';
-const WA = 'https://api.whatsapp.com/send?phone=5511976903548';
+const WA = 'https://api.whatsapp.com/send?phone=5511973967161';
 const WA_ESPECIALISTA = WA + '&text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista%20sobre%20o%20Aurora%20Premium.';
 
 const must = (c, m) => { if (!c) throw new Error(m); };
