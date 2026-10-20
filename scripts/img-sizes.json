@@ -1,7 +1,7 @@
 {
  "/img/aurora-premium-sistema-de-agendamento-e-gestao.webp": {
-  "m": 349,
-  "d": 611
+  "m": 350,
+  "d": 613
  },
  "/img/aurora-premium-agenda-online-sistema-de-agendamento.webp": {
   "m": 350,
@@ -45,7 +45,7 @@
  },
  "/img/aurora-premium-sistema-para-salao-de-beleza.webp": {
   "m": 350,
-  "d": 611
+  "d": 613
  },
  "/img/aurora-premium-agenda-online-para-salao-de-beleza.webp": {
   "m": 350,
@@ -72,16 +72,16 @@
   "d": 625
  },
  "/img/aurora-premium-sistema-para-barbearia.webp": {
-  "m": 348,
-  "d": 612
+  "m": 350,
+  "d": 613
  },
  "/img/aurora-premium-controle-financeiro-barbearia.webp": {
   "m": 350,
   "d": 625
  },
  "/img/aurora-premium-sistema-para-clinica-de-estetica.webp": {
-  "m": 349,
-  "d": 611
+  "m": 350,
+  "d": 612
  },
  "/img/aurora-premium-agenda-para-clinica-de-estetica.webp": {
   "m": 350,
@@ -105,7 +105,7 @@
  },
  "/img/aurora-premium-sistema-para-clinica-odontologica.webp": {
   "m": 349,
-  "d": 612
+  "d": 613
  },
  "/img/aurora-premium-agenda-odontologica.webp": {
   "m": 350,
@@ -131,7 +131,7 @@
   "d": 425
  },
  "/img/aurora-premium-sistema-para-clinica-medica.webp": {
-  "m": 348,
+  "m": 350,
   "d": 612
  },
  "/img/aurora-premium-agenda-medica.webp": {
@@ -155,8 +155,8 @@
   "d": 625
  },
  "/img/aurora-premium-sistema-para-esmalteria.webp": {
-  "m": 349,
-  "d": 612
+  "m": 350,
+  "d": 613
  },
  "/img/aurora-premium-agenda-para-esmalteria.webp": {
   "m": 350,
@@ -187,7 +187,7 @@
  },
  "/img/aurora-premium-sistema-para-designer-de-sobrancelhas.webp": {
   "m": 349,
-  "d": 612
+  "d": 613
  },
  "/img/aurora-premium-agenda-para-designer-de-sobrancelhas.webp": {
   "m": 350,
@@ -218,7 +218,7 @@
  },
  "/img/aurora-premium-sistema-para-spa.webp": {
   "m": 349,
-  "d": 611
+  "d": 612
  },
  "/img/aurora-premium-agenda-para-spa.webp": {
   "m": 350,
@@ -237,8 +237,8 @@
   "d": 625
  },
  "/img/aurora-premium-sistema-para-clinica-veterinaria-lembrete.webp": {
-  "m": 349,
-  "d": 451
+  "m": 350,
+  "d": 453
  },
  "/img/aurora-premium-controle-financeiro-clinica-veterinaria.webp": {
   "m": 350,
@@ -250,7 +250,7 @@
  },
  "/img/aurora-premium-sistema-para-pet-shop-visao-geral.webp": {
   "m": 349,
-  "d": 611
+  "d": 613
  },
  "/img/aurora-premium-agenda-de-banho-e-tosa.webp": {
   "m": 350,
@@ -272,24 +272,40 @@
   "m": 350,
   "d": 625
  },
- "/img/legacy/sistema-para-redes-e-franquias-aurora-premium-1199w-U2gvb.webp": {
-  "m": 320,
-  "d": 460
+ "/img/aurora-premium-sistema-para-rede-de-saloes-de-beleza.webp": {
+  "m": 349,
+  "d": 613
  },
- "/img/legacy/rede-de-barbearias-multiunidades-aurora-premium-1199w-q82tO.webp": {
-  "m": 320,
-  "d": 460
+ "/img/aurora-premium-sistema-para-rede-de-barbearias.webp": {
+  "m": 348,
+  "d": 613
  },
- "/img/legacy/aurora-premium-pet-shop-multiunidades-1122w-s66tJ.webp": {
-  "m": 320,
-  "d": 460
+ "/img/aurora-premium-sistema-para-rede-de-pet-shops.webp": {
+  "m": 349,
+  "d": 612
  },
- "/img/legacy/rede-de-clinicas-veterinarias-aurora-premium-1122w-TT42K.webp": {
-  "m": 320,
-  "d": 460
+ "/img/aurora-premium-pet-shop-clientes-e-pets.webp": {
+  "m": 350,
+  "d": 625
+ },
+ "/img/aurora-premium-sistema-para-rede-de-clinicas-veterinarias.webp": {
+  "m": 350,
+  "d": 612
+ },
+ "/img/aurora-premium-sistema-para-rede-de-clinicas-odontologicas.webp": {
+  "m": 349,
+  "d": 613
+ },
+ "/img/aurora-premium-sistema-para-rede-de-clinicas-medicas.webp": {
+  "m": 349,
+  "d": 613
+ },
+ "/img/aurora-premium-sistema-para-rede-de-spas.webp": {
+  "m": 349,
+  "d": 613
  },
  "/img/aurora-premium-lembrete-de-agendamento-whatsapp.webp": {
-  "m": 348,
-  "d": 450
+  "m": 349,
+  "d": 452
  }
 }
