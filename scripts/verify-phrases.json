@@ -41,8 +41,7 @@
   "Agendamento InteligenteHolds em tempo real, QR Code por profissional e"
  ],
  "/faq/": [
-  "Tudo o que você precisa saber sobre agenda online, WhatsApp, teste grá",
-  "O sistema envia lembretes automáticos via WhatsApp e e-mail para o cli"
+  "Perguntas frequentes sobre o sistema de agendamento e gestão Aurora Premium"
  ],
  "/lembrete-de-agendamento-whatsapp/": [
   "Modelo de mensagem de lembrete de consulta e de horário"
@@ -108,5 +107,8 @@
  ],
  "/sistema-para-barbearia/": [
   "Comissão de barbeiro calculada a cada corte"
+ ],
+ "/sobre/": [
+  "A história do Aurora Premium começa na chegada do celular digital ao Brasil"
  ]
 }

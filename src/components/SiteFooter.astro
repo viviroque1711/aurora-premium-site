@@ -1,6 +1,6 @@
 ---
 // Rodapé único do site (todas as páginas).
-import { SEGMENTOS, REDES, PLATAFORMA, WHATSAPP, EMAIL } from '../data/nav.mjs';
+import { SEGMENTOS, REDES, PLATAFORMA, WHATSAPP, EMAIL, EMPRESA, SOCIAL } from '../data/nav.mjs';
 import { u } from '../lib/url.mjs';
 
 const { updated } = Astro.props; // AAAA-MM-DD (lastmod.json)
@@ -34,12 +34,13 @@ const updatedBr = `${d}/${m}/${y}`;
       <ul>
         <li><a href={`mailto:${EMAIL}`}>{EMAIL}</a></li>
         <li><a href={WHATSAPP.href} rel="noopener">WhatsApp {WHATSAPP.label}</a></li>
+        {SOCIAL.map((l) => <li><a href={l.href} rel="noopener me" target="_blank">{l.label}</a></li>)}
       </ul>
     </div>
   </div>
 
   <div class="ap-footer-end">
-    <span>© 2026 Aurora Premium</span>
+    <span>© 2026 Aurora Premium · {EMPRESA.nome} · CNPJ {EMPRESA.cnpj}</span>
     <a href={u('/termos-de-uso/')}>Termos de Uso</a>
     <a href={u('/politica-de-privacidade/')}>Política de Privacidade</a>
     <span>Atualizado em {updatedBr}</span>

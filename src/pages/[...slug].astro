@@ -1,6 +1,6 @@
 ---
 // Rota única das páginas importadas (src/content-pages/<slug>/), todas com a mesma moldura
-// (SiteHeader + SiteFooter). Conteúdo, CSS, JSON-LD e script do miolo saem como vieram.
+// (SiteHeader + SiteFooter + botão flutuante do WhatsApp). Conteúdo, CSS, JSON-LD e script do miolo saem como vieram.
 import '../styles/frame.css';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
@@ -16,7 +16,6 @@ const { dir } = Astro.props;
 const parts = pageParts(dir);
 const { css, ld, js } = parts;
 const legacy = !css; // páginas antigas (React pré-renderizado) não têm CSS próprio
-const subnav = parts.subnav ? JSON.parse(parts.subnav) : [];
 const updated = contentPages().find((p) => p.dir === dir).lastmod;
 
 let head = parts.head;
@@ -39,11 +38,11 @@ if (process.env.SITE_ENV === 'staging') {
 {css && <style is:inline set:html={css}></style>}
 <link rel="stylesheet" href={u(legacy ? '/legacy-overrides.css' : '/pkg-overrides.css')}>
 </head>
-<body class={legacy ? 'ap-has-wa' : undefined}>
-<SiteHeader subnav={subnav} />
+<body class="ap-has-wa">
+<SiteHeader />
 <Fragment set:html={body} />
 <SiteFooter updated={updated} />
-{legacy && <WhatsAppFloat />}
+<WhatsAppFloat />
 {!legacy && <script is:inline>{`
   document.querySelectorAll('.grid-fade').forEach(function (box) {
     var sc = box.querySelector('.grid-scroll');

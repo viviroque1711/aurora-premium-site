@@ -1,4 +1,4 @@
-/* Moldura única do site: cabeçalho, barra de seções, rodapé e botão do WhatsApp.
+/* Moldura única do site: cabeçalho (uma barra só, com o menu ☰ de módulos), rodapé e botão do WhatsApp.
    Tudo com prefixo .ap- para não colidir com o CSS das páginas (pacotes novos e páginas antigas).
    Valores = tokens da skill aurora-premium-design (fundo escuro, texto #A0A0B8, roxo de texto #A78BFA). */
 
@@ -169,29 +169,35 @@
 .ap-burger {
   flex: none;
   display: inline-flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  width: 44px;
+  gap: 8px;
+  min-width: 44px;
   height: 44px;
-  padding: 0;
-  border: 0;
-  border-radius: 12px;
+  padding: 0 10px;
+  border: 1px solid var(--ap-border);
+  border-radius: 999px;
   background: none;
+  color: var(--ap-title);
+  font: 600 15px/1 var(--ap-body-font);
   cursor: pointer;
+  transition: border-color .2s, background .2s;
 }
-.ap-burger span {
+.ap-burger:hover,
+.ap-burger[aria-expanded="true"] { border-color: var(--ap-accent); background: rgba(167, 139, 250, .08); }
+.ap-burger-ico { display: inline-flex; flex-direction: column; gap: 4px; }
+.ap-burger-ico i {
   display: block;
-  width: 22px;
+  width: 18px;
   height: 2px;
   border-radius: 2px;
-  background: var(--ap-title);
+  background: currentColor;
   transition: transform .2s, opacity .2s;
 }
-.ap-burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.ap-burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-.ap-burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.ap-burger[aria-expanded="true"] .ap-burger-ico i:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.ap-burger[aria-expanded="true"] .ap-burger-ico i:nth-child(2) { opacity: 0; }
+.ap-burger[aria-expanded="true"] .ap-burger-ico i:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+.ap-burger-txt { display: none; }
 
 .ap-header .progress {
   position: absolute;
@@ -205,10 +211,7 @@
   pointer-events: none;
 }
 
-/* barra de seções da página (só 1024 px ou mais) */
-.ap-subnav { display: none; }
-
-/* menu aberto (abaixo de 1024 px) */
+/* painel do menu ☰ (módulos; abaixo de 1024 px também segmentos e links) */
 .ap-backdrop {
   position: fixed;
   inset: 64px 0 0 0;
@@ -229,11 +232,37 @@
   border-bottom: 1px solid var(--ap-border);
 }
 .ap-menu-h {
-  padding: 12px 4px 4px;
+  padding: 12px 4px 6px;
   color: var(--ap-accent);
   font: 700 14px/1.4 var(--ap-body-font);
 }
-.ap-menu a:not(.ap-cta) {
+.ap-mods { display: grid; grid-template-columns: 1fr; gap: 2px; }
+.ap-mods a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  min-height: 56px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  color: var(--ap-title);
+  transition: background .2s;
+}
+.ap-mods a:hover { background: rgba(255, 255, 255, .07); }
+.ap-mods b { font: 600 15.5px/1.3 var(--ap-body-font); }
+.ap-mods small { color: var(--ap-text); font-size: 13.5px; line-height: 1.35; }
+.ap-mods-all {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  margin-top: 6px;
+  padding: 0 10px;
+  border-top: 1px solid var(--ap-border);
+  color: var(--ap-accent);
+  font-weight: 600;
+}
+.ap-menu-mobile { margin-top: 10px; }
+.ap-menu-mobile ul:not(.ap-mods) a:not(.ap-cta) {
   display: flex;
   align-items: center;
   min-height: 48px;
@@ -247,7 +276,11 @@
 .ap-menu-main a { font-weight: 600 !important; }
 .ap-cta-block { width: 100%; min-height: 48px; margin: 20px 0 0; padding: 0 20px; font-size: 16px; }
 html.ap-menu-open { overflow: hidden; }
+html { scroll-padding-top: 76px; }
 
+@media (min-width: 560px) {
+  .ap-mods { grid-template-columns: 1fr 1fr; }
+}
 @media (min-width: 480px) {
   .ap-cta-long { display: inline; }
   .ap-cta-short { display: none; }
@@ -256,39 +289,25 @@ html.ap-menu-open { overflow: hidden; }
 }
 @media (min-width: 1024px) {
   .ap-nav { display: flex; }
-  .ap-burger,
-  .ap-menu,
-  .ap-backdrop { display: none !important; }
   .ap-logo { font-size: 18px; }
-  .ap-cta { min-height: 40px; }
-  .ap-subnav {
-    display: block;
-    border-top: 1px solid var(--ap-border);
+  .ap-cta { min-height: 40px; margin-left: auto; }
+  .ap-burger { padding: 0 16px 0 14px; height: 40px; }
+  .ap-burger-txt { display: inline; }
+  html.ap-menu-open { overflow: auto; }
+  .ap-backdrop { background: rgba(10, 10, 15, .35); }
+  .ap-menu {
+    top: 72px;
+    left: auto;
+    right: max(16px, calc((100vw - 1200px) / 2 + 16px));
+    width: min(760px, calc(100vw - 32px));
+    max-height: calc(100vh - 96px);
+    padding: 12px 16px 16px;
     background: var(--ap-surface);
+    border: 1px solid var(--ap-border);
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .5);
   }
-  .ap-subnav-in {
-    max-width: 1200px;
-    margin-inline: auto;
-    padding-inline: 12px;
-    display: flex;
-    gap: 2px;
-    overflow-x: auto;
-  }
-  .ap-subnav a {
-    display: inline-flex;
-    align-items: center;
-    min-height: 40px;
-    padding: 0 14px;
-    color: var(--ap-text);
-    font: 600 14px/1 var(--ap-body-font);
-    white-space: nowrap;
-    transition: color .2s;
-  }
-  .ap-subnav a:hover { color: var(--ap-title); }
-  html:has(.ap-subnav) { scroll-padding-top: 120px; }
-}
-@media (max-width: 1023.98px) {
-  html { scroll-padding-top: 72px; }
+  .ap-menu-mobile { display: none; }
 }
 
 /* ---------- rodapé ---------- */
@@ -352,7 +371,7 @@ html.ap-menu-open { overflow: hidden; }
   .ap-footer-end > * { min-height: 32px; }
 }
 
-/* ---------- botão flutuante do WhatsApp (páginas antigas) ---------- */
+/* ---------- botão flutuante do WhatsApp (todas as páginas) ---------- */
 .ap-wa {
   position: fixed;
   right: 16px;
@@ -360,20 +379,50 @@ html.ap-menu-open { overflow: hidden; }
   z-index: 45;
   display: grid;
   place-items: center;
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  background: #15803D;
+  background: #25D366;
   color: #fff;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, .45);
-  transition: opacity .25s, transform .25s;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .35);
+  transition: transform .2s, background .2s;
 }
-.ap-wa:hover { background: #166534; }
-.ap-wa-hide { opacity: 0; transform: translateY(8px); pointer-events: none; visibility: hidden; }
-body.ap-has-wa { padding-bottom: calc(52px + 16px + env(safe-area-inset-bottom, 0px)); }
+.ap-wa:hover { background: #1EBE5A; transform: scale(1.06); }
+html.ap-menu-open .ap-wa { display: none; }
+body.ap-has-wa { padding-bottom: calc(56px + 20px + env(safe-area-inset-bottom, 0px)); }
+@media (min-width: 1024px) {
+  .ap-wa { right: 24px; bottom: 24px; }
+  body.ap-has-wa { padding-bottom: 0; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .ap-header *,
   .ap-footer *,
   .ap-wa { transition: none !important; }
+  .ap-menu, .ap-backdrop, .ap-wa, .ap-wa::after { animation: none !important; }
 }
+
+/* ---------- MOVIMENTO (design) ----------
+   Regra: movimento que RESPONDE a uma ação (abrir o menu) ou aparece UMA vez (botão do WhatsApp).
+   Nada em loop. O conteúdo nunca fica escondido esperando animação. */
+@keyframes ap-menu-in { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: none; } }
+@keyframes ap-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ap-wa-in { from { opacity: 0; transform: translateY(14px) scale(.7); } to { opacity: 1; transform: none; } }
+@keyframes ap-wa-ring { 0% { opacity: .55; transform: scale(1); } 100% { opacity: 0; transform: scale(1.7); } }
+@media (prefers-reduced-motion: no-preference) {
+  .ap-menu:not([hidden]) { animation: ap-menu-in .24s cubic-bezier(.2, .8, .2, 1) both; }
+  .ap-backdrop:not([hidden]) { animation: ap-fade-in .2s ease-out both; }
+  /* entra uma vez, depois que a página já carregou; um único anel chama a atenção e para */
+  .ap-wa { animation: ap-wa-in .55s cubic-bezier(.2, .8, .2, 1) 1.2s both; }
+  .ap-wa::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid #25D366;
+    pointer-events: none;
+    opacity: 0;
+    animation: ap-wa-ring 1.5s ease-out 5s 1 both;
+  }
+}
+

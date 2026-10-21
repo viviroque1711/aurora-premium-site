@@ -1,0 +1,322 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://aurorapremium.com/#org",
+   "name": "Aurora Premium",
+   "url": "https://aurorapremium.com/",
+   "logo": "https://aurorapremium.com/android-chrome-512x512.png",
+   "email": "contato@aurorapremium.com",
+   "sameAs": [
+    "https://www.instagram.com/aurorapremium.oficial/"
+   ]
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://aurorapremium.com/faq/#page",
+   "url": "https://aurorapremium.com/faq/",
+   "name": "Perguntas Frequentes: Sistema de Agendamento | Aurora Premium",
+   "inLanguage": "pt-BR",
+   "about": {
+    "@id": "https://aurorapremium.com/#org"
+   },
+   "dateModified": "2026-10-20"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://aurorapremium.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Perguntas frequentes",
+     "item": "https://aurorapremium.com/faq/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://aurorapremium.com/faq/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O que é o Aurora Premium?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O Aurora Premium é um sistema de agendamento e gestão que reúne agenda online, lembrete pelo WhatsApp, clientes, comissões, financeiro, equipe, estoque e relatórios com inteligência artificial em um só lugar, no celular e no computador. Conheça os módulos."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Para quais negócios serve o sistema de agendamento?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Para negócios que atendem por hora marcada: salão de beleza, barbearia, clínica de estética, clínica médica, clínica odontológica, clínica veterinária, pet shop, spa, esmalteria, designer de sobrancelhas e redes com várias unidades. Veja o sistema para salão de beleza."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Preciso instalar algum programa ou aplicativo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. O Aurora Premium funciona no navegador do computador e do celular, sem instalar nada. A recepção usa no computador e cada profissional acompanha a própria agenda no celular."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Qual a diferença entre sistema, programa, software e aplicativo de agendamento?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Na prática, são nomes diferentes para a mesma ferramenta. O Aurora Premium é um software de agendamento que funciona como programa no computador da recepção e como aplicativo no celular da equipe, pelo navegador."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quem criou o Aurora Premium?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O Aurora Premium foi criado por Viviane Roque e lançado em 2025. É desenvolvido pela Roque Business Evolution Serviços Ltda., CNPJ 47.308.584/0001-20. Conheça a história."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quanto custa o Aurora Premium?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Os planos são Solo, R$ 39,90 por mês, para quem atende sozinho; Essential, R$ 157, para uma unidade com até 5 profissionais; Growth, R$ 497, com comissão completa, precificação e metas da equipe; Scale, R$ 1.197, para até 5 unidades; e Enterprise, sob consulta, para redes maiores. Compare os planos."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Existe sistema de agendamento grátis?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O Aurora Premium tem 14 dias de teste grátis com todas as funcionalidades, sem cadastrar cartão de crédito. Depois do teste, você escolhe o plano que cabe no seu negócio, a partir de R$ 39,90 por mês."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Precisa de cartão de crédito para testar?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. Você cria a conta e testa por 14 dias sem informar cartão de crédito."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Qual plano escolher?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Quem atende sozinho começa pelo Solo. Quem tem equipe e uma unidade escolhe o Essential; se precisar de comissão completa, margem por serviço e metas, o Growth. Quem tem de 2 a 5 unidades escolhe o Scale, e redes maiores, o Enterprise."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O cliente consegue agendar sozinho pela internet?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. Cada negócio tem uma página de agendamento online e um link com QR code para a bio do Instagram, o WhatsApp e o balcão. O cliente escolhe serviço, profissional e horário, 24 horas por dia, e o agendamento entra direto na agenda."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Funciona para salão com vários profissionais?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. A agenda mostra todos os profissionais lado a lado, cada um com os próprios horários, e só deixa marcar em horário livre. A comissão de cada profissional é calculada por serviço."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como o sistema de agendamento reduz faltas?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O Aurora Premium envia a confirmação na hora do agendamento e lembretes 24 horas e 1 hora antes, pelo WhatsApp e por e-mail. O atendimento pode ser marcado como \"não compareceu\", e o painel mostra a taxa de faltas do mês. Leia o guia para reduzir faltas."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dá para marcar horário recorrente e pacote de sessões?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. O agendamento recorrente repete o horário toda semana, até 52 vezes, pulando datas ocupadas. O pacote de sessões guarda o saldo do cliente e o intervalo entre as sessões; falta não consome sessão."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O lembrete pelo WhatsApp tem custo adicional?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. O lembrete e a confirmação de horário pelo WhatsApp fazem parte de todos os planos do Aurora Premium, sem contratar outro serviço. Veja como funciona o lembrete."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quando o lembrete é enviado?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A confirmação sai quando o horário é marcado, e os lembretes saem 24 horas e 1 hora antes do atendimento. O texto da mensagem pode ser editado."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Posso conversar com meus clientes pelo WhatsApp dentro do Aurora Premium?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O atendimento por conversa no WhatsApp é um complemento à parte, feito por um parceiro. Ele não é nativo do Aurora Premium e não funciona como uma ponte em tempo real com a agenda e o cadastro de clientes."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O Aurora Premium processa pagamentos? E o Pix?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O Aurora Premium não processa o pagamento do seu cliente: ele paga pela forma que o seu negócio já usa, como maquininha, Pix ou dinheiro. De forma opcional, a chave Pix do próprio negócio aparece na confirmação do agendamento para o cliente pagar um sinal direto para ela. O sistema registra o que foi pago e calcula a comissão."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Preciso trocar de maquininha?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. Você continua com a sua maquininha e o seu Pix, com as taxas que já negociou."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O sistema de agendamento emite nota fiscal?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. A emissão da nota fiscal continua no sistema da prefeitura ou do seu contador."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O sistema calcula impostos?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O Aurora Premium estima o imposto de cada serviço e produto nos relatórios financeiros, que exportam em PDF e Excel para o seu contador."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O sistema calcula a comissão automaticamente?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. A comissão é configurada por serviço e por profissional, em porcentagem ou valor fixo, e calculada a cada atendimento concluído. Cada profissional vê o que tem a receber no celular. O cálculo completo de comissão está a partir do plano Growth. Veja como calcular comissão."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Tem controle financeiro e fechamento de caixa?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. O financeiro registra cada atendimento pago, venda e despesa, faz o fechamento do caixa do dia e mostra o fluxo de caixa previsto e realizado."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O estoque baixa sozinho?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim, a partir do plano Essential. Cada serviço tem a sua receita de produtos, e o estoque desconta o que foi usado quando o atendimento é concluído, com alerta de estoque baixo e ponto de reposição. Leia o guia de controle de estoque."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dá para controlar a equipe, metas e ponto?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. A gestão de equipe tem escala, metas, ranking com recompensas, ponto pelo celular e aprovação de pedidos. Metas e ranking estão a partir do plano Growth."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O Aurora Premium usa inteligência artificial?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. Os relatórios com IA analisam os dados reais do negócio em oito áreas, como agendamentos, financeiro, clientes e cancelamentos, e entregam insights por prioridade. Sem dados suficientes, o sistema informa isso em vez de gerar um resultado. A decisão final é sempre sua."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O que é a Aurora Consulting?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É a consultoria estratégica com inteligência artificial que vem dentro do Aurora Premium, construída com o método de Viviane Roque. Ela orienta o dono do negócio em crescimento, vendas, posicionamento, mindset, estratégia e clientes. Saiba mais."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O sistema tem ficha de anamnese e prontuário?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. A ficha de anamnese e o prontuário são ligados aos serviços que envolvem saúde, com assinatura do cliente, anexos e alerta de validade de exames. Clínicas médicas e odontológicas também têm convênios e plano de tratamento em etapas. Veja o sistema para clínica odontológica."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Posso usar para clínica veterinária e pet shop juntos?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. A agenda de banho e tosa, as consultas veterinárias e o estoque da loja ficam no mesmo sistema, com o histórico de cada pet e tutor. Veja o sistema para clínica veterinária."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Posso gerenciar mais de uma unidade na mesma conta?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. No plano Scale você gerencia até 5 unidades em uma conta, com agenda, equipe e a receita de cada unidade lado a lado. Para redes maiores, o plano Enterprise é sob consulta. Veja o sistema para redes e franquias."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Consigo trazer os dados do sistema que uso hoje?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. A Central de Migração traz clientes, serviços, atendimentos e profissionais de outro sistema ou planilha, e cada migração pode ser revisada ou desfeita."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Posso exportar os meus dados?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. Em Exportar meus dados você baixa clientes, serviços, atendimentos, equipe, estoque e financeiro a qualquer momento."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Os dados dos meus clientes ficam seguros?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Os dados ficam hospedados em infraestrutura de nuvem (Supabase e AWS), com controle de acesso por perfil: cada pessoa da equipe vê apenas o que o administrador liberar."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O Aurora Premium segue a LGPD?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. A Política de Privacidade descreve como os dados pessoais são coletados, usados e protegidos, com base na Lei Geral de Proteção de Dados (LGPD). Leia a Política de Privacidade."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como falar com o Aurora Premium?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pelo WhatsApp +55 11 97396-7161 ou pelo e-mail contato@aurorapremium.com."
+     }
+    }
+   ]
+  }
+ ]
+}

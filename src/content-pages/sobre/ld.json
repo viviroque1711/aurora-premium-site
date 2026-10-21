@@ -1,0 +1,149 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://aurorapremium.com/#org",
+   "name": "Aurora Premium",
+   "url": "https://aurorapremium.com/",
+   "logo": "https://aurorapremium.com/android-chrome-512x512.png",
+   "email": "contato@aurorapremium.com",
+   "telephone": "+55-11-97396-7161",
+   "foundingDate": "2025",
+   "description": "Sistema de agendamento e gestão para negócios de serviço: salões de beleza, barbearias, clínicas, spas, pet shops e estúdios.",
+   "founder": {
+    "@id": "https://aurorapremium.com/sobre/#viviane-roque"
+   },
+   "parentOrganization": {
+    "@id": "https://aurorapremium.com/sobre/#roque-business-evolution"
+   },
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@aurorapremium.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/aurorapremium.oficial/"
+   ]
+  },
+  {
+   "@type": "Organization",
+   "@id": "https://aurorapremium.com/sobre/#roque-business-evolution",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "founder": {
+    "@id": "https://aurorapremium.com/sobre/#viviane-roque"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ]
+  },
+  {
+   "@type": "Person",
+   "@id": "https://aurorapremium.com/sobre/#viviane-roque",
+   "name": "Viviane Roque",
+   "jobTitle": "Fundadora do Aurora Premium",
+   "worksFor": {
+    "@id": "https://aurorapremium.com/#org"
+   },
+   "knowsAbout": [
+    "Gestão de operações",
+    "Transformação digital",
+    "Gestão de projetos (PMO)",
+    "Telecomunicações",
+    "Sistemas de agendamento e gestão para pequenos negócios"
+   ],
+   "sameAs": [
+    "https://www.linkedin.com/in/vivianepereirambas/",
+    "https://www.instagram.com/viviroqueoficial/"
+   ]
+  },
+  {
+   "@type": "AboutPage",
+   "@id": "https://aurorapremium.com/sobre/#page",
+   "url": "https://aurorapremium.com/sobre/",
+   "name": "Sobre o Aurora Premium e a Fundadora Viviane Roque",
+   "inLanguage": "pt-BR",
+   "about": {
+    "@id": "https://aurorapremium.com/#org"
+   },
+   "mainEntity": {
+    "@id": "https://aurorapremium.com/#org"
+   },
+   "dateModified": "2026-10-20"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://aurorapremium.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Sobre",
+     "item": "https://aurorapremium.com/sobre/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Quem criou o Aurora Premium?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O Aurora Premium foi criado por Viviane Roque, que trabalha com tecnologia e operações desde 1998, com passagens pela BCP (depois Claro), pela Ernst & Young e pela NEC, onde atuou nas arenas Fonte Nova e Pernambuco da Copa do Mundo de 2014."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quando o Aurora Premium foi lançado?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O Aurora Premium foi lançado em 2025."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Qual empresa desenvolve o Aurora Premium?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O Aurora Premium é desenvolvido pela Roque Business Evolution Serviços Ltda., CNPJ 47.308.584/0001-20, empresa fundada por Viviane Roque."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Para quais negócios é o Aurora Premium?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Para negócios de serviço que trabalham com hora marcada: salões de beleza, barbearias, clínicas de estética, clínicas médicas e odontológicas, clínicas veterinárias, pet shops, spas, esmalterias, estúdios de sobrancelhas e redes com várias unidades."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O que é a Aurora Consulting?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É a consultoria estratégica com inteligência artificial que vem dentro do Aurora Premium, construída com o método de Viviane Roque. Ela orienta o dono do negócio em crescimento, vendas, posicionamento, mindset, estratégia e clientes, sem custo à parte."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como falar com o Aurora Premium?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pelo WhatsApp +55 11 97396-7161 ou pelo e-mail contato@aurorapremium.com."
+     }
+    }
+   ]
+  }
+ ]
+}
