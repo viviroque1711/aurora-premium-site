@@ -56,7 +56,7 @@ for (const pkg of process.argv.slice(2)) {
     if (changed) {
       const lm = path.join(root, 'src', 'data', 'lastmod.json');
       const map = fs.existsSync(lm) ? JSON.parse(read(lm)) : {};
-      map[slug ? `/${slug}/` : '/'] = new Date().toISOString().slice(0, 10);
+      map[slug ? `/${slug.replace(/__/g, '/')}/` : '/'] = new Date().toISOString().slice(0, 10);
       write(lm, JSON.stringify(map, null, 2) + '\n');
     }
     write(path.join(d, 'head.html'), parts.head + '\n');
