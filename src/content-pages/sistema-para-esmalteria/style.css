@@ -93,6 +93,7 @@ p{margin:0}
 .sub strong{color:#fff;font-weight:600}
 
 /* grade do dia (bloco 2) */
+.day{color:var(--text-light)}
 .day{margin-top:56px;background:var(--surface-light);border:1px solid var(--border-light);border-radius:20px;box-shadow:0 30px 60px rgba(29,19,48,.10);padding:20px;min-width:0}
 .day-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px}
 .day-head strong{font-family:var(--font-title);color:var(--title-light);font-size:20px}
