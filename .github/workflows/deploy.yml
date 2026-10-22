@@ -17,6 +17,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      # "staging" = endereço de teste (noindex); "production" = domínio aurorapremium.com (virada em 20/10/2026).
+      SITE_ENV: production
     steps:
       - uses: actions/checkout@v4
         with:
@@ -27,9 +30,9 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-        env:
-          # "staging" = endereço de teste (noindex); "production" = domínio aurorapremium.com (virada em 20/10/2026).
-          SITE_ENV: production
+      - name: Checa que os robôs de busca e de IA entram em todo o site (só em produção)
+        if: env.SITE_ENV == 'production'
+        run: node scripts/check-robots.mjs dist
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
