@@ -106,10 +106,19 @@ export function addGridHint(body) {
   );
 }
 
+/** Grade que rola de lado precisa de foco por teclado e de nome (axe: scrollable-region-focusable). */
+export function focusGrid(body) {
+  return body
+    .replace('<div class="grid-scroll">', '<div class="grid-scroll" tabindex="0" role="region" aria-label="Grade de exemplo da agenda, role para o lado para ver todas as colunas">')
+    .replace(/<th><\/th>/g, '<th><span class="ap-sr">Critério</span></th>')
+    .replace(/<div class="tbl">/g, '<div class="tbl" tabindex="0" role="region" aria-label="Tabela comparativa, role para o lado para ver todas as colunas">')
+    .replace(/<div class="cmp-wrap"(?! tabindex)/g, '<div class="cmp-wrap" tabindex="0" role="region" aria-label="Tabela comparativa, role para o lado para ver todas as colunas"');
+}
+
 export function frameTransform(body, kind) {
   if (kind === 'package') {
     const r = stripPackage(body);
-    return { body: addGridHint(labelTables(r.body)), subnav: r.subnav };
+    return { body: focusGrid(addGridHint(labelTables(r.body))), subnav: r.subnav };
   }
   return { body: wrapCustomTables(labelTables(stripLegacy(body))), subnav: null };
 }
