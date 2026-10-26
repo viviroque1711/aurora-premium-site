@@ -137,7 +137,7 @@
      "name": "Como o sistema de agendamento reduz faltas?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "O Aurora Premium envia a confirmação na hora do agendamento e lembretes 24 horas e 1 hora antes, pelo WhatsApp e, nos planos com envio de e-mail, também por e-mail (o Solo envia pelo WhatsApp). O atendimento pode ser marcado como \"não compareceu\", e o painel mostra a taxa de faltas do mês. Leia o guia para reduzir faltas."
+      "text": "O Aurora Premium envia a confirmação na hora do agendamento e lembretes 24 horas e cerca de 3 horas antes, pelo WhatsApp e, nos planos com envio de e-mail, também por e-mail (o Solo envia pelo WhatsApp). O atendimento pode ser marcado como \"não compareceu\", e o painel mostra a taxa de faltas do mês. Leia o guia para reduzir faltas."
      }
     },
     {
@@ -161,7 +161,7 @@
      "name": "Quando o lembrete é enviado?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "A confirmação sai quando o horário é marcado, e os lembretes saem 24 horas e 1 hora antes do atendimento. O texto da mensagem pode ser editado."
+      "text": "A confirmação sai quando o horário é marcado, e os lembretes saem 24 horas e cerca de 3 horas antes do atendimento. O texto da mensagem pode ser editado."
      }
     },
     {
