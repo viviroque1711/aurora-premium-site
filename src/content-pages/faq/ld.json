@@ -150,6 +150,14 @@
     },
     {
      "@type": "Question",
+     "name": "O meu site aparece no Google? O que preciso fazer?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pode aparecer, e você decide. No editor do site, ligue a opção “Aparecer no Google”. O site entra sozinho na lista que o Google consulta quando todas estas condições estão certas: o site está publicado; a conta está ativa, com assinatura ou teste gratuito válido; o nome do negócio está preenchido; há pelo menos 3 serviços ativos; há telefone, WhatsApp ou um endereço fixo com rua e cidade; e a conta não é de teste. Você não precisa pedir nada ao Google. O Google costuma levar de alguns dias a algumas semanas para mostrar o site e decide se mostra e em que posição: ninguém garante isso. Se uma condição deixar de valer, por exemplo o teste gratuito acabar sem assinatura, o site sai do Google sozinho em até 1 hora e volta quando você regularizar. O editor mostra, com ✓ ou ✗, o que ainda falta."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "O lembrete pelo WhatsApp tem custo adicional?",
      "acceptedAnswer": {
       "@type": "Answer",
