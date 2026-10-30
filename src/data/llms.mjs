@@ -42,7 +42,7 @@ export const LLMS = {
   "/sistema-para-rede-de-clinicas-medicas/": { group: 2, entrega: "Rede de clínicas médicas: prontuário, exames e convênio do paciente em qualquer unidade, agenda por médico e consultório, comissão de médicos e receita de cada clínica." },
   "/sistema-para-rede-de-spas/": { group: 2, entrega: "Rede de spas e day spas: salas e terapeutas por unidade, pacote de sessões válido em qualquer unidade, comissão de terapeutas e receita de cada endereço." },
   "/blog/": { group: 3, entrega: "Guias práticos de gestão para salões, barbearias, clínicas e pet shops, escritos por Viviane Roque, fundadora do Aurora Premium." },
-  "/blog/reduzir-faltas-no-show-agenda-online/": { group: 3, entrega: "Como reduzir faltas na agenda: 9 ações, modelos de mensagem de lembrete e como medir a taxa de faltas." },
+  "/blog/reduzir-faltas-no-show-agenda-online/": { group: 3, entrega: "Como reduzir faltas no salão e na clínica (no-show): 9 ações, modelos de mensagem de lembrete e como medir a taxa de faltas." },
   "/blog/comissionamento-automatico-fim-planilha/": { group: 3, entrega: "Como calcular comissão de profissional: modelos (percentual, valor fixo, por serviço), exemplos de cálculo e base de cálculo." },
   "/blog/crm-clinicas-nunca-perder-cliente/": { group: 3, entrega: "CRM para clínicas: retorno, tratamentos parados, faixas de 30 e 60 dias, mensagens de retorno e cuidados com dados de saúde." },
   "/blog/controle-estoque-saloes-petshops/": { group: 3, entrega: "Controle de estoque para salão e pet shop: estoque de uso e de revenda, ficha de consumo, ponto de reposição e checklist mensal." },
