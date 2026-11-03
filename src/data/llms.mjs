@@ -49,5 +49,6 @@ export const LLMS = {
   "/blog/agenda-compartilhada-multiplos-profissionais/": { group: 3, entrega: "Agenda compartilhada para vários profissionais: regras de duração, intervalo, cancelamento, salas e permissões." },
   "/blog/um-sistema-em-vez-de-tres/": { group: 3, entrega: "Sistema de gestão ou ERP para salão e clínica: custo das ferramentas soltas, comparação e 12 critérios para escolher." },
   "/termos-de-uso/": { group: 4, entrega: "Termos de uso da plataforma Aurora Premium." },
+  "/excluir-conta/": { group: 4, entrega: "Como pedir a exclusão da conta e dos dados no aplicativo e no sistema, prazos e o que é mantido por lei." },
   "/politica-de-privacidade/": { group: 4, entrega: "Política de privacidade: como os dados pessoais são coletados, usados e protegidos." },
 };
