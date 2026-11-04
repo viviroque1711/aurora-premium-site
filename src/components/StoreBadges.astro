@@ -1,0 +1,20 @@
+---
+// Botões das lojas de aplicativos no rodapé. Não renderiza NADA enquanto nenhuma loja estiver ligada em
+// src/data/stores.mjs (hoje: nenhuma). Ao ligar, trocar estes botões de texto pelos selos oficiais da Apple e
+// do Google (as duas empresas exigem o uso dos selos oficiais, baixados das páginas de marca delas).
+import { lojasAtivas } from '../data/stores.mjs';
+
+const lojas = lojasAtivas();
+---
+{lojas.length > 0 && (
+  <ul class="ap-stores" aria-label="Aplicativo do Aurora Premium">
+    {lojas.map((l) => (
+      <li>
+        <a class="ap-store" href={l.url} rel="noopener" aria-label={l.label}>
+          <span class="ap-store-pre">{l.prefixo}</span>
+          <span class="ap-store-name">{l.texto}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+)}

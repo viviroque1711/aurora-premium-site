@@ -2,6 +2,7 @@
 // Rodapé único do site (todas as páginas).
 import { SEGMENTOS, REDES, PLATAFORMA, WHATSAPP, EMAIL, EMPRESA, SOCIAL } from '../data/nav.mjs';
 import { u } from '../lib/url.mjs';
+import StoreBadges from './StoreBadges.astro';
 
 const { updated } = Astro.props; // AAAA-MM-DD (lastmod.json)
 const [y, m, d] = updated.split('-');
@@ -15,6 +16,7 @@ const updatedBr = `${d}/${m}/${y}`;
         <span>Aurora Premium</span>
       </a>
       <p>O Aurora Premium é um sistema de agendamento online e gestão para salões, barbearias, clínicas e pet shops.</p>
+      <StoreBadges />
     </div>
 
     <nav class="ap-footer-col" aria-label="Plataforma">

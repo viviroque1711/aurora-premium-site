@@ -329,6 +329,16 @@ html { scroll-padding-top: 76px; }
 .ap-footer-brand { grid-column: 1 / -1; }
 .ap-footer-brand p { margin-top: 12px; max-width: 34rem; color: var(--ap-text); font-size: 15px; line-height: 1.6; }
 .ap-footer-brand .ap-logo { font-size: 18px; }
+/* Botões das lojas (só existem no HTML quando uma loja está ligada em src/data/stores.mjs). */
+.ap-stores { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; }
+.ap-store {
+  display: inline-flex; flex-direction: column; justify-content: center; gap: 1px;
+  min-height: 48px; padding: 6px 18px; border: 1px solid var(--ap-border); border-radius: 12px;
+  background: var(--ap-surface); color: var(--ap-title);
+}
+.ap-store-pre { font-size: 12px; line-height: 1.2; color: var(--ap-text); }
+.ap-store-name { font-size: 17px; font-weight: 700; line-height: 1.2; }
+.ap-store:hover { border-color: var(--ap-accent); }
 .ap-footer-h {
   margin: 0 0 4px;
   color: var(--ap-title);
