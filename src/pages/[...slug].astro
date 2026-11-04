@@ -28,6 +28,14 @@ if (process.env.SITE_ENV === 'staging') {
   head = fix(head.replace(/<meta name="robots" content="[^"]*">/, '<meta name="robots" content="noindex, nofollow">'));
   body = fixSet(body);
 }
+
+// Cartão do X/Twitter: twitter:title, twitter:description e twitter:image repetem o og:title, o og:description e o og:image
+// de CADA página (um lugar só, vale para todas as páginas). Só acrescenta o que a página ainda não tiver.
+for (const campo of ['title', 'description', 'image']) {
+  if (new RegExp(`name="twitter:${campo}"`).test(head)) continue;
+  const og = head.match(new RegExp(`<meta property="og:${campo}" content="([^"]*)"`));
+  if (og) head += `\n<meta name="twitter:${campo}" content="${og[1]}">`;
+}
 ---
 <!doctype html>
 <html lang="pt-BR">

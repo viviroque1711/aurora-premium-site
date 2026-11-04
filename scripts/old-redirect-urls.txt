@@ -5,3 +5,4 @@
 /segmentos/spas/
 /segmentos/barbearias/
 /segmentos/petshops/
+/modules/
