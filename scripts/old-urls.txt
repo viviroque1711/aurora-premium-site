@@ -1,5 +1,5 @@
 /
-/modules/
+/modulos/
 /diferenciais/
 /faq/
 /blog/

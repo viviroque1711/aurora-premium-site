@@ -5,6 +5,7 @@ import { defineConfig } from 'astro/config';
 const staging = process.env.SITE_ENV === 'staging';
 const B = staging ? '/aurora-premium-site' : '';
 const redirects = {
+  '/modules/': B + '/modulos/', // endereco em ingles (04/11/2026): a pagina agora vive em /modulos/
   '/agenda-para-clinica-veterinaria/': B + '/sistema-para-clinica-veterinaria/',
   '/segmentos/veterinarias/': B + '/sistema-para-clinica-veterinaria/',
   '/segmentos/clinicas/': B + '/agenda-para-consultorio-medico/',
