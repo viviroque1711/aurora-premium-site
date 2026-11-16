@@ -6,8 +6,11 @@
 // publicar um selo que leva a erro (ver `lojasAtivas`).
 export const LOJAS = {
   googlePlay: {
-    live: false,
-    url: '', // https://play.google.com/store/apps/details?id=com.aurorapremium.app
+    // LIGADO em 16/11/2026: versão 5 publicada no Brasil e página conferida (HTTP 200, nome do app). O selo é o oficial do Google
+    // (public/img/selo-google-play-pt-br.png, baixado da página de marcas do Google, sem alteração).
+    live: true,
+    url: 'https://play.google.com/store/apps/details?id=com.aurorapremium.app',
+    selo: { src: '/img/selo-google-play-pt-br.png', width: 646, height: 250 },
     label: 'Baixar o Aurora Premium no Google Play',
     texto: 'Google Play',
     prefixo: 'Disponível no',

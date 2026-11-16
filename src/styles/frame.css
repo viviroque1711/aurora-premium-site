@@ -339,6 +339,10 @@ html { scroll-padding-top: 76px; }
 .ap-store-pre { font-size: 12px; line-height: 1.2; color: var(--ap-text); }
 .ap-store-name { font-size: 17px; font-weight: 700; line-height: 1.2; }
 .ap-store:hover { border-color: var(--ap-accent); }
+/* Selo oficial da loja: sem moldura nem recorte (as lojas exigem o selo sem alteração e com área livre ao redor). */
+.ap-store-selo { display: inline-flex; align-items: center; min-height: 48px; border-radius: 12px; }
+.ap-store-selo img { display: block; height: 62px; width: auto; max-width: 100%; }
+.ap-store-selo:focus-visible { outline: 2px solid var(--ap-accent); outline-offset: 2px; }
 .ap-footer-h {
   margin: 0 0 4px;
   color: var(--ap-title);
