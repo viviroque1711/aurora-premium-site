@@ -2,16 +2,14 @@
 // Botões das lojas de aplicativos no rodapé. Não renderiza NADA enquanto nenhuma loja estiver ligada em
 // src/data/stores.mjs (hoje: só o Google Play, desde 16/11/2026). Loja com `selo` mostra o selo oficial sem alteração
 // (as lojas exigem o selo oficial, baixado das páginas de marca delas); a que não tem selo mostra o botão de texto.
-import { lojasAtivas } from '../data/stores.mjs';
+import { lojasAtivas, linkComMedicao, paginaParaMedicao } from '../data/stores.mjs';
 
 const lojas = lojasAtivas();
 // Medição de instalações: o Google Play devolve o `referrer` no Play Console (Aquisição). Um link por página, com a página
 // em utm_content, mostra de qual página do site veio cada instalação. Só o Google Play usa isso; a App Store não.
-const pagina = Astro.url.pathname.split('/').filter(Boolean).join('-') || 'inicio';
-const comMedicao = (l) =>
-  l.chave === 'googlePlay'
-    ? `${l.url}&referrer=${encodeURIComponent(`utm_source=aurorapremium.com&utm_medium=site&utm_campaign=rodape&utm_content=${pagina}`)}`
-    : l.url;
+const { local = 'rodape' } = Astro.props; // rodape (padrão), menu...
+const pagina = paginaParaMedicao(Astro.url.pathname);
+const comMedicao = (l) => linkComMedicao(l, local, pagina);
 ---
 {lojas.length > 0 && (
   <ul class="ap-stores" aria-label="Aplicativo do Aurora Premium">
