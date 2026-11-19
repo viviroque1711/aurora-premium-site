@@ -100,6 +100,9 @@
   cursor: pointer;
   transition: color .2s;
 }
+/* Link do app (só existe quando uma loja está ligada): contorno fino em pílula, para ser visível sem competir com o CTA. */
+.ap-nav > a.ap-nav-app { margin-left: 4px; padding: 0 16px; min-height: 40px; border: 1px solid var(--ap-border); color: var(--ap-title); }
+.ap-nav > a.ap-nav-app:hover { border-color: var(--ap-accent); }
 .ap-nav > a:hover,
 .ap-dd-btn:hover,
 .ap-dd-btn[aria-expanded="true"] { color: var(--ap-title); }
@@ -273,6 +276,7 @@
   font-weight: 500;
 }
 .ap-menu-main { margin-top: 8px; }
+.ap-menu-mobile .ap-stores { margin-top: 16px; }
 .ap-menu-main a { font-weight: 600 !important; }
 .ap-cta-block { width: 100%; min-height: 48px; margin: 20px 0 0; padding: 0 20px; font-size: 16px; }
 html.ap-menu-open { overflow: hidden; }

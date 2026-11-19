@@ -4,6 +4,12 @@
 // Abaixo de 1024 px o mesmo painel traz também Segmentos, Planos, Blog e Entrar.
 import { SEGMENTOS, REDES_HUB, MODULOS, SIGNUP, LOGIN } from '../data/nav.mjs';
 import { u } from '../lib/url.mjs';
+import { lojasAtivas, linkComMedicao, paginaParaMedicao, ROTULO_CURTO } from '../data/stores.mjs';
+import StoreBadges from './StoreBadges.astro';
+
+// Só aparece o que está PUBLICADO (lojasAtivas falha o build se uma loja ligada tiver endereço inválido).
+const lojas = lojasAtivas();
+const pagina = paginaParaMedicao(Astro.url.pathname);
 ---
 <header class="ap-header" data-ap-header>
   <div class="ap-bar">
@@ -25,6 +31,9 @@ import { u } from '../lib/url.mjs';
       <a href={u('/planos/')}>Planos</a>
       <a href={u('/blog/')}>Blog</a>
       <a href={LOGIN} rel="noopener">Entrar</a>
+      {lojas.map((l) => (
+        <a class="ap-nav-app" href={linkComMedicao(l, 'cabecalho', pagina)} rel="noopener" aria-label={l.label}>{ROTULO_CURTO[l.chave]}</a>
+      ))}
     </nav>
 
     <a class="ap-cta" href={SIGNUP} rel="noopener">
@@ -61,6 +70,7 @@ import { u } from '../lib/url.mjs';
           <li><a href={LOGIN} rel="noopener">Entrar</a></li>
         </ul>
         <a class="ap-cta ap-cta-block" href={SIGNUP} rel="noopener">Teste o Aurora Premium</a>
+        <StoreBadges local="menu" />
       </div>
     </div>
   </div>
