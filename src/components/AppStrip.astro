@@ -1,0 +1,16 @@
+---
+// Faixa do app logo abaixo do cabeçalho (celular e tablet; no computador o selo já fica no cabeçalho, que acompanha a rolagem).
+// Só existe quando uma loja está ligada em src/data/stores.mjs. O selo é o oficial da loja, sem alteração.
+import { lojasAtivas } from '../data/stores.mjs';
+import StoreBadges from './StoreBadges.astro';
+const lojas = lojasAtivas();
+const texto = lojas.length > 1 ? 'Baixe o app do Aurora Premium' : 'Aurora Premium no seu celular';
+---
+{lojas.length > 0 && (
+  <div class="ap-appstrip">
+    <div class="ap-appstrip-in">
+      <p>{texto}</p>
+      <StoreBadges local="topo" />
+    </div>
+  </div>
+)}
