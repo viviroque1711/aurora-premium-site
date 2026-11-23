@@ -8,6 +8,7 @@ import SiteFooter from '../components/SiteFooter.astro';
 import WhatsAppFloat from '../components/WhatsAppFloat.astro';
 import { contentPages, pageDirs, pageParts } from '../lib/pages.mjs';
 import { u } from '../lib/url.mjs';
+import { comConviteApp } from '../lib/app-invite.mjs';
 
 export function getStaticPaths() {
   return pageDirs().map((dir) => ({ params: { slug: dir === '_home' ? undefined : dir.replace(/__/g, '/') }, props: { dir } }));
@@ -20,7 +21,7 @@ const legacy = !css; // páginas antigas (React pré-renderizado) não têm CSS 
 const updated = contentPages().find((p) => p.dir === dir).lastmod;
 
 let head = parts.head;
-let body = parts.body;
+let body = comConviteApp(parts.body, Astro.url.pathname);
 // Ambiente de teste (GitHub Pages em /aurora-premium-site/): noindex e caminhos/links/srcset apontando para o próprio teste.
 if (process.env.SITE_ENV === 'staging') {
   const base = '/aurora-premium-site';

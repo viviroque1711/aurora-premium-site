@@ -351,6 +351,13 @@ html { scroll-padding-top: 76px; }
 .ap-store-selo { display: inline-flex; align-items: center; min-height: 48px; border-radius: 12px; }
 .ap-store-selo img { display: block; height: 62px; width: auto; max-width: 100%; }
 .ap-store-selo:focus-visible { outline: 2px solid var(--ap-accent); outline-offset: 2px; }
+/* Convite do app na primeira dobra (terceira linha de ação, abaixo dos botões; herda a cor de texto da seção). */
+.app-invite { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 16px; margin-top: 20px; }
+.app-invite p { margin: 0; max-width: 21rem; font-size: 15px; line-height: 1.4; color: var(--sec-text, var(--ap-text)); }
+.app-invite-selo { display: inline-flex; border-radius: 12px; }
+.app-invite-selo img { display: block; height: 60px; width: auto; }
+.app-invite-selo:focus-visible { outline: 2px solid var(--ap-accent); outline-offset: 2px; }
+@media (max-width: 1023.98px) { .app-invite { order: 7; flex-direction: column; justify-content: center; text-align: center; gap: 0; } .app-invite p { max-width: none; } }
 /* Faixa do app abaixo do cabeçalho (celular e tablet). */
 .ap-appstrip { background: var(--ap-surface); border-bottom: 1px solid var(--ap-border); }
 .ap-appstrip-in { max-width: 1200px; margin-inline: auto; padding: 4px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
