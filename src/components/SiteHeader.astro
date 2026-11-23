@@ -31,7 +31,11 @@ const pagina = paginaParaMedicao(Astro.url.pathname);
       <a href={u('/planos/')}>Planos</a>
       <a href={u('/blog/')}>Blog</a>
       <a href={LOGIN} rel="noopener">Entrar</a>
-      {lojas.map((l) => (
+      {lojas.map((l) => l.selo ? (
+        <a class="ap-nav-selo" href={linkComMedicao(l, 'cabecalho', pagina)} rel="noopener" aria-label={l.label}>
+          <img src={u(l.selo.src)} width={l.selo.width} height={l.selo.height} alt={l.label} decoding="async" />
+        </a>
+      ) : (
         <a class="ap-nav-app" href={linkComMedicao(l, 'cabecalho', pagina)} rel="noopener" aria-label={l.label}>{ROTULO_CURTO[l.chave]}</a>
       ))}
     </nav>

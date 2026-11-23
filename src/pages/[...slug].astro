@@ -3,6 +3,7 @@
 // (SiteHeader + SiteFooter + botão flutuante do WhatsApp). Conteúdo, CSS, JSON-LD e script do miolo saem como vieram.
 import '../styles/frame.css';
 import SiteHeader from '../components/SiteHeader.astro';
+import AppStrip from '../components/AppStrip.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import WhatsAppFloat from '../components/WhatsAppFloat.astro';
 import { contentPages, pageDirs, pageParts } from '../lib/pages.mjs';
@@ -48,6 +49,7 @@ for (const campo of ['title', 'description', 'image']) {
 </head>
 <body class="ap-has-wa">
 <SiteHeader />
+<AppStrip />
 <Fragment set:html={body} />
 <SiteFooter updated={updated} />
 <WhatsAppFloat />
