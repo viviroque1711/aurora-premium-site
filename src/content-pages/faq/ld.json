@@ -5,11 +5,44 @@
    "@type": "Organization",
    "@id": "https://aurorapremium.com/#org",
    "name": "Aurora Premium",
+   "alternateName": [
+    "Aurora Premium sistema de agendamento",
+    "Aurora Premium Agendamento CRM"
+   ],
    "url": "https://aurorapremium.com/",
    "logo": "https://aurorapremium.com/android-chrome-512x512.png",
    "email": "contato@aurorapremium.com",
+   "telephone": "+55-11-97396-7161",
+   "foundingDate": "2025",
+   "description": "Sistema de agendamento online e gestão para negócios de serviço: salões de beleza, barbearias, clínicas, spas, pet shops e estúdios.",
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "parentOrganization": {
+    "@type": "Organization",
+    "@id": "https://roquebusinessevolution.com/#org",
+    "name": "Roque Business Evolution",
+    "url": "https://roquebusinessevolution.com/",
+    "legalName": "Roque Business Evolution Serviços Ltda.",
+    "taxID": "47.308.584/0001-20",
+    "founder": {
+     "@id": "https://viviroque.com.br/#viviane-roque"
+    },
+    "sameAs": [
+     "https://www.instagram.com/roquebusinessevolution/",
+     "https://www.youtube.com/@roquebusinessevolution"
+    ]
+   },
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@aurorapremium.com",
+    "availableLanguage": "pt-BR"
+   },
    "sameAs": [
-    "https://www.instagram.com/aurorapremium.oficial/"
+    "https://www.instagram.com/aurorapremium.oficial/",
+    "https://play.google.com/store/apps/details?id=com.aurorapremium.app"
    ]
   },
   {
